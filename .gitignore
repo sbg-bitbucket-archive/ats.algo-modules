@@ -1,0 +1,13 @@
+*/target/
+*/bin/
+*/.settings/
+*/.project
+*/.classpath
+*/.metadata
+*~
+*.swp
+*.log
+*.lnk
+*.DS_Store
+/.metadata/
+/.recommenders/

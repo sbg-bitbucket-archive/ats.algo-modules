@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+
+	<servers>
+
+		<server>
+			<id>ats.algo.repo1</id>
+			<username>###supplied username###</username>
+			<password>###supplied password###</password>
+		</server>
+
+	</servers>
+
+</settings>
+

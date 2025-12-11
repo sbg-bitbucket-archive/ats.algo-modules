@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+ 	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"
+	default-autowire="byName">
+
+	<mvc:annotation-driven />
+	<context:annotation-config />
+
+	<bean class="ats.spring.AtsPropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:algo-mgr-defaults.properties</value>
+			</list>
+		</property>
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+	</bean>
+
+	<bean
+		class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="jsonMessageConverter" />
+			</list>
+		</property>
+	</bean>
+
+	<import resource="classpath:algo-ignite-cache.xml" />
+
+	<!-- Configure bean to convert JSON to POJO and vice versa -->
+	<bean id="jsonMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+
+	<bean name="algoMgrController" class="ats.algo.algomanager.AlgoMgrController">
+	</bean>
+
+	<bean id="algoMgrConnectionFactory"
+		class="org.springframework.jms.connection.CachingConnectionFactory">
+		<property name="sessionCacheSize" value="10" />
+		<property name="cacheConsumers" value="false" />
+		<property name="reconnectOnException" value="true" />
+		<property name="targetConnectionFactory">
+			<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL" value="${algoMgr.broker.url}" />
+				<property name="trustAllPackages" value="true" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="algoMgrArchivingQueue" class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg index="0" value="algoMgrArchiving" />
+	</bean>
+
+	<bean id="algoMgrArchivingConnectionFactory"
+		class="org.springframework.jms.connection.CachingConnectionFactory">
+		<property name="sessionCacheSize" value="1" />
+		<property name="cacheConsumers" value="false" />
+		<property name="reconnectOnException" value="true" />
+		<property name="targetConnectionFactory">
+			<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL" value="${algoMgr.archiving.broker.url}" />
+				<property name="trustAllPackages" value="true" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean id="archivingTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory" ref="algoMgrArchivingConnectionFactory" />
+		<property name="defaultDestination" ref="algoMgrArchivingQueue" />
+		<property name="pubSubDomain" value="false" />
+		<property name="deliveryPersistent" value="false" />
+		<property name="explicitQosEnabled" value="true" />
+	</bean>
+
+	<bean name="recordedItemArchiveHandler" class="ats.algo.integration.RecordedItemArchiveHandlerImpl"
+		init-method="init">
+		<property name="archiveLogDirectory"
+			value="${algomgr.archiveLogDirectory:recorded-item-archives}" />
+		<property name="archiveToFileEnabled" value="${algomgr.archiveToFileEnabled:false}" />
+		<property name="archiveToJmsEnabled" value="${algomgr.archiveToJmsEnabled:false}" />
+		<property name="deleteArchiveAfterHrs" value="${algomgr.deleteArchiveAfterHrs:48}" />
+		<property name="archivingTemplate" ref="archivingTemplate" />
+	</bean>
+
+	<bean name="marketTypeAliasResolver" class="ats.algo.integration.MarketTypeAliasResolver"
+		init-method="init">
+		<property name="marketTypeAliasFile" value="${algomgr.ats-mapping-resource}" />
+	</bean>
+
+
+	<bean name="atsMarketTypeMapper" class="ats.algo.integration.AtsMarketTypeMapper">
+	</bean>
+
+	<import resource="classpath:${algomgr.springBridgeContext:empty}.xml" />
+
+	<context:component-scan
+		base-package="${algomgr.springBridgeComponentScanPackage:nosuchpackage}" />
+
+
+	<bean name="algoManagerSpringBridge" class="ats.algo.springbridge.SpringContextBridge">
+	</bean>
+
+	<import resource="classpath:${algomgr.config:sharedmemory}-manager-config.xml" />
+
+	<bean name="algoStatsPublisher" class="ats.algo.integration.AlgoStatsPublisher"
+		init-method="init">
+		<property name="influxUrl" value="${ats.influxUrl:http://localhost:18086}" />
+		<property name="enabled" value="${ats.influxKPIEnabled:false}" />
+		<property name="influxDbName" value="${ats.influxDbName:atsMetrics}" />
+		<property name="influxUser" value="${ats.influxUser:admin}" />
+		<property name="influxPassword" value="${ats.influxPassword:admin}" />
+	</bean>
+
+	<bean name="algoMgrBetsyncCoordinator" class="ats.algo.integration.AlgoMgrBetsyncCoordinator"
+		init-method="init">
+		<property name="betsyncService" ref="betsyncService" />
+		<property name="websocketClient" ref="betsyncOutWebsocketClient" />
+		<property name="algoWorkQueueDumpSize" value="${algomgr.algoWorkQueueDumpSize:15}" />
+		<property name="newMarketsToBetsyncBatchSize" value="${algomgr.newMarketsToBetsyncBatchSize:60}" />
+	</bean>
+
+	<bean name="betsyncOutWebsocketClient" class="ats.betting.betsync.out.BetsyncOutWebsocketClient">
+		<property name="betsyncUrl" value="${algomgr.betsync.out.url}" />
+		<property name="username" value="${algomgr.betsync.username}" />
+		<property name="password" value="${algomgr.betsync.password}" />
+		<property name="keepAliveInterval" value="${algomgr.betsync.keepAliveInterval:3}" />
+		<property name="maxEventQueueExecutors" value="${algomgr.betsync.maxEventQueueExecutors:8}" />
+		<property name="applicationName" value="algoMgr" />
+	</bean>
+
+	<bean name="betsyncService" class="ats.betting.betsync.service.BetsyncService" init-method="init">
+		<property name="betsyncInProxy" ref="betsyncInRestApiClient" />
+		<property name="cachePrices" value="false" />
+		<property name="maxEventQueueExecutors" value="${algomgr.betsync.maxEventQueueExecutors:8}" />
+	</bean>
+
+	<bean name="betsyncInRestApiClient" class="ats.sports.betsync.in.feed.BetsyncInRestApiClient"
+		init-method="init">
+		<property name="connectTimeout" value="${algomgr.betsync-in.connectTimeout:10000}" />
+		<property name="readTimeout" value="${algomgr.betsync-in.readTimeout:15000}" />
+		<property name="betsyncInUrlPrefix" value="${algomgr.betsync.in.url}" />
+		<property name="betsyncInUser" value="${algomgr.betsync.username}" />
+		<property name="betsyncInPass" value="${algomgr.betsync.password}" />
+		<property name="generateApiExceptions" value="true" />
+	</bean>
+
+</beans>

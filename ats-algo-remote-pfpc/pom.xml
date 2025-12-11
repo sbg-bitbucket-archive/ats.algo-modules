@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-algo-parent</artifactId>
+		<version>1.2219.0</version>
+		<relativePath>../ats-algo-parent</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ats-algo-remote-pfpc</artifactId>
+	<packaging>war</packaging>
+	<name>Algo Remote Paramfind</name>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-algomanager</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>ats.algo</groupId>
+			<artifactId>ats-algo-algomanager-base</artifactId>
+		</dependency>
+
+	<!-- <dependency>
+    		<groupId>ladbrokes</groupId>
+    		<artifactId>ladbrokes-afl</artifactId>
+    		<version>0.7.0</version>
+		</dependency> -->
+	
+	</dependencies>
+
+</project>

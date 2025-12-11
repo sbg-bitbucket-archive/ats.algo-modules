@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-algo-parent</artifactId>
+		<version>1.2219.0</version>
+		<relativePath>../ats-algo-parent</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ats-algo-benchmarktests</artifactId>
+	
+	
+
+	<dependencies>
+		<dependency>
+		  <groupId>org.apache.activemq</groupId>
+		  <artifactId>activemq-all</artifactId>
+		  <version>${activemq.version}</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-algomanager</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>

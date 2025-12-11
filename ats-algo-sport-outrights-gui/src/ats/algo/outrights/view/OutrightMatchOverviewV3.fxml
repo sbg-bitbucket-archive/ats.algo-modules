@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<!--stylesheets="application.css" -->
+
+<AnchorPane maxHeight="1026.0" maxWidth="2028.0" prefHeight="900.0" prefWidth="1270.0" AnchorPane.leftAnchor="10" AnchorPane.topAnchor="10" 
+xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ats.algo.outrights.view.OutrightMatchOverviewController">
+   
+         <children>
+      <SplitPane dividerPositions="0.08" layoutX="5.0" layoutY="7.0" orientation="VERTICAL" prefHeight="876.0" prefWidth="1442.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="74.0" prefWidth="1410.0">
+               <children>
+                  <Label layoutX="17.0" layoutY="17.0" prefHeight="25.0" prefWidth="259.0" text=" Competition List （eventId）:" />
+                  <ComboBox fx:id="competitionCombo" cache="true" editable="true" layoutX="261.0" layoutY="11.0" onAction="#onComboboxUpdated" prefHeight="25.0" prefWidth="250.0" promptText="choose" />
+                  <Button fx:id="update" layoutX="567.0" layoutY="11.0" mnemonicParsing="false" onAction="#onUpdateButtonPressed" text="update" />
+                  <Button fx:id="refresh" layoutX="672.0" layoutY="11.0" mnemonicParsing="false" onAction="#onRefreshButtonPressed" text="cancel" />
+                  <CheckBox fx:id="changeEditableColor" layoutX="764.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateColorButtonPressed" text="displayColumnColor" />
+                  <CheckBox fx:id="standingEditable" layoutX="979.0" layoutY="17.0" mnemonicParsing="false" onAction="#onUpdateStandingButtonPressed" text="standingEditable" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="790.0" prefWidth="1240.0">
+               <children>
+                  <TabPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="652.0" prefWidth="1433.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="7.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab text="Teams">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="496.0" prefWidth="1720.0">
+                                 <children>
+                                    <SplitPane layoutX="30.0" layoutY="38.0" orientation="VERTICAL" prefHeight="513.0" prefWidth="281.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <TableView fx:id="teamsTable" editable="true" prefHeight="584.0" prefWidth="1430.0">
+                                             <columns>
+                                                <TableColumn fx:id="teamID" editable="true" prefWidth="70.0" text="ID" />
+                                                <TableColumn fx:id="displayName" editable="true" prefWidth="150.0" text="Name" />
+                                                <TableColumn fx:id="fiveThirtyEightName" editable="true" prefWidth="200.0" style="-fx-background-color: blue;" styleClass=".table-view .column-header {    -fx-background-color: transparent;}" text="FiveThirtyEightName" />
+                                                <TableColumn fx:id="ratingAttack" editable="true" prefWidth="100.0" styleClass="column.css" text="Attack" />
+                                                <TableColumn fx:id="ratingDefense" editable="true" prefWidth="100.0" style="-fx-background-color: red;" text="Defense" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Fixtures">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane layoutX="30.0" layoutY="38.0" orientation="VERTICAL" prefHeight="513.0" prefWidth="281.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <TableView fx:id="fixturesTable" editable="true" prefHeight="589.0" prefWidth="992.0">
+                                             <columns>
+                                                <TableColumn fx:id="date" editable="true" prefWidth="120.0" text="Date" />
+                                                <TableColumn fx:id="fixtureType" editable="true" prefWidth="100.0" text="FixtureType" />
+                                                <TableColumn fx:id="fixtureID" editable="true" prefWidth="60.0" text="FixtureID" />
+                                                <TableColumn fx:id="status" editable="true" prefWidth="100.0" text="Status" />
+                                                <TableColumn fx:id="homeTeamID" editable="true" prefWidth="100.0" text="HomeTeam" />
+                                                <TableColumn fx:id="awayTeamID" editable="true" prefWidth="100.0" text="AwayTeam" />
+                                                <TableColumn fx:id="eventID" editable="true" prefWidth="60.0" text="EventID" />
+                                                <TableColumn fx:id="tag" editable="true" prefWidth="30.0" text="Tag" />
+                                                <TableColumn fx:id="playedAtNeutralGround" editable="true" prefWidth="50.0" text="PlayedAtNeutralGround" />
+                                                <TableColumn fx:id="goalsHome" editable="true" prefWidth="100.0" text="goalsHome" />
+                                                <TableColumn fx:id="goalsAway" editable="true" prefWidth="100.0" text="goalsAway" />
+                                                <TableColumn fx:id="probsSourcedfromATS" editable="true" prefWidth="100.0" text="ProbSource" />
+                                                <TableColumn fx:id="pHome" editable="true" prefWidth="50.0" text="PHome" />
+                                                <TableColumn fx:id="pAway" editable="true" prefWidth="50.0" text="PAway" />
+                                                <TableColumn fx:id="pDraw" editable="true" prefWidth="50.0" text="PDraw" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Standings">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane layoutX="37.0" layoutY="94.0" orientation="VERTICAL" prefHeight="513.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <TableView fx:id="standingsTable" editable="true" prefHeight="390.0" prefWidth="1011.0">
+                                             <columns>
+                                                <TableColumn fx:id="teamId" editable="true" prefWidth="100.0" text="Team" />
+                                                <TableColumn fx:id="played" editable="true" prefWidth="100.0" text="Played" />
+                                                <TableColumn fx:id="won" editable="true" prefWidth="100.0" text="Won" />
+                                                <TableColumn fx:id="drawn" editable="true" prefWidth="100.0" text="Drawn" />
+                                                <TableColumn fx:id="goalsFor" editable="true" prefWidth="100.0" text="GoalsFor" />
+                                                <TableColumn fx:id="goalsAgainst" editable="true" prefWidth="100.0" text="GoalsAgainst" />
+                                                <TableColumn fx:id="points" editable="true" prefWidth="100.0" text="Points" />
+                                             </columns>
+                                             <columnResizePolicy>
+                                                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                             </columnResizePolicy>
+                                          </TableView>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="tabWarnings" style="-fx-background-color: red;" text="Warnings">
+                           <content>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <SplitPane layoutX="37.0" layoutY="94.0" orientation="VERTICAL" prefHeight="513.0" prefWidth="219.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <items>
+                                          <TableView fx:id="warningsTable" editable="true" prefHeight="390.0" prefWidth="1011.0" tableMenuButtonVisible="true">
+                                             <columns>
+                                                <TableColumn fx:id="eventIDWarning" editable="true" prefWidth="123.0" text="EventID" />
+                                                <TableColumn fx:id="competetionNameWarning" editable="true" prefWidth="190.0" text="CompetetionName" />
+                                                <TableColumn fx:id="stateOk" editable="true" prefWidth="133.0" text="StateOk" />
+                                                <TableColumn fx:id="warningMessages" editable="true" prefWidth="737.0" text="WarningMessages" />
+                                             </columns>
+                                          </TableView>
+                                       </items>
+                                    </SplitPane>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+                  <AnchorPane layoutX="3.0" layoutY="706.0" prefHeight="106.0" prefWidth="1261.0" AnchorPane.bottomAnchor="-13.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="706.0">
+                     <children>
+                        <TextArea fx:id="updateText" layoutX="1.0" layoutY="6.0" prefHeight="93.0" prefWidth="1261.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="6.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

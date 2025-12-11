@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+
+	<localRepository>/home/kheneghan/.m2-coral-algo/repository</localRepository>
+
+	<servers>
+
+		<server>
+			<id>ats.algo.repo1</id>
+			<username>coral</username>
+			<password>AP7YDQfzCeu2rP8vzFtqZCAhaHe</password>
+		</server>
+
+	</servers>
+
+</settings>
+

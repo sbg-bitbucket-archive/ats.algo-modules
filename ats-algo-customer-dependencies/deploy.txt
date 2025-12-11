@@ -1,0 +1,61 @@
+
+Deployment Steps
+=================
+
+
+cd ats-algo-all
+mvn -Pall -DskipTests clean install
+
+cd ..
+cd ats-algo-parent
+
+# Check current version and update the minor number (typically), e.g. 0.12.0 -> 0.13.0
+# Manually update the version on both lines that end with <!-- ALGO VERSION -->
+# If DTO has changed, updated version in property 'algo.dto.version'
+
+mvn install
+
+cd ..
+cd ats-algo-all
+mvn versions:update-parent
+mvn versions:commit
+mvn -Pcore versions:update-parent
+mvn -Pcore versions:commit
+mvn -Pcore -DskipTests clean install
+
+# The following step is only required if DTO version was changed
+cd ..
+cd ats-algo-dto
+mvn versions:update-parent
+mvn versions:commit
+mvn -Palgo-repo -DskipTests deploy 
+mvn -DskipTests deploy 
+
+cd ..
+cd ats-algo-all
+mvn -Psport-parent versions:update-parent
+mvn -Psport-parent versions:commit
+mvn -Psport-parent install
+
+mvn -Pall versions:update-parent
+mvn -Pall versions:commit
+
+mvn -DskipTests -Pall clean install
+
+cd ..
+cd ats-algo-customer-dependencies
+
+mvn versions:update-parent
+mvn versions:commit
+mvn -Palgo-repo -DskipTests deploy
+mvn -DskipTests deploy
+
+
+Note: ensure your settings.xml contains this server
+
+		<server>
+			<id>ats.algo.repo</id>
+			<username>ats-algo</username>
+			<password>AP4o8AgmgqaHY1MNrtnXMiHQ8tygR6XUqTz3a1</password>
+		</server>
+

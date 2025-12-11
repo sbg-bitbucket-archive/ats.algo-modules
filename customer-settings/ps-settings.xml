@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+
+	<localRepository>/home/kheneghan/.m2-ps-algo/repository</localRepository>
+
+	<servers>
+
+		<server>
+			<id>ats.algo.repo1</id>
+			<username>pokerstars</username>
+			<password>AP2GGeezuHKdtraCWL48kcGZz8t</password>
+		</server>
+
+	</servers>
+
+</settings>
+

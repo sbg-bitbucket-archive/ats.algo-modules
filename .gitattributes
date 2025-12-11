@@ -1,0 +1,25 @@
+# Set the default behavior, in case people don't have core.autocrlf set.
+* text=auto
+
+# Enforce linux style line endings for source files. 
+
+*.java		eol=lf
+*.xml		eol=lf
+*.xsd		eol=lf
+*.wsdl		eol=lf
+*.html  	eol=lf
+*.sh		eol=lf
+*.bash		eol=lf
+*.bat		eol=lf
+*.js		eol=lf
+*.css		eol=lf
+*.properties	eol=lf
+*.csv		eol=lf
+*.ladder	eol=lf
+*.margins	eol=lf
+*.fxml		eol=lf
+*.txt		eol=lf
+*.story		eol=lf
+
+
+algo-remotepcpf-defaults.properties binary

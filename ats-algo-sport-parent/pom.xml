@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-algo-parent</artifactId>
+		<version>1.2219.0</version>
+		<relativePath>../ats-algo-parent</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ats-algo-sport-parent</artifactId>
+	<name>The ATS Algo Modules Parent for specific sports</name>
+	<description>parent for sport-specific projects: ats-algo-sport-XXX</description>
+	<packaging>pom</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>ats.algo</groupId>
+			<artifactId>ats-algo-matchrunner</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ats.algo</groupId>
+			<artifactId>ats-algo-generic-functions</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ats.algo</groupId>
+			<artifactId>ats-algo-montecarloframework</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>
+

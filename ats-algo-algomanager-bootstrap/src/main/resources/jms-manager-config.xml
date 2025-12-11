@@ -1,0 +1,149 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	default-autowire="byName">
+
+	<bean id="paramFindRequestQueue"
+		class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg index="0"
+			value="algoMgrParamFindReqs" />
+	</bean>
+
+	<bean id="priceCalcRequestQueue"
+		class="org.apache.activemq.command.ActiveMQQueue">
+		<constructor-arg index="0"
+			value="algoMgrPriceCalcReqs" />
+	</bean>
+
+	<bean id="paramFindingTemplate"
+		class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory"
+			ref="algoMgrConnectionFactory" />
+		<property name="defaultDestination"
+			ref="paramFindRequestQueue" />
+		<property name="pubSubDomain" value="false" />
+		<property name="deliveryPersistent" value="false" />
+		<property name="explicitQosEnabled" value="true" />
+	</bean>
+
+	<bean id="priceCalcTemplate"
+		class="org.springframework.jms.core.JmsTemplate">
+		<property name="connectionFactory"
+			ref="algoMgrConnectionFactory" />
+		<property name="defaultDestination"
+			ref="priceCalcRequestQueue" />
+		<property name="pubSubDomain" value="false" />
+		<property name="deliveryPersistent" value="false" />
+		<property name="explicitQosEnabled" value="true" />
+	</bean>
+
+	<bean name="algoManagerConfiguration"
+		class="ats.algo.algomanager.JmsAlgoManagerConfiguration"
+		init-method="init">
+		<property name="priceCalcRequestsCacheTimeMins"
+			value="${algomgr.jms.priceCalcRequestsCacheTimeMins:25}" />
+		<property name="paramFindRequestsCacheTimeMins"
+			value="${algomgr.jms.paramFindRequestsCacheTimeMins:25}" />
+		<property name="compressExternalRequests"
+			value="${algomgr.jms.compressExternalRequests:false}" />
+		<property name="maxConcurrentReplyThreads"
+			value="${algomgr.jms.maxConcurrentReplyThreads:5}" />
+		<property name="priceCalcTimeoutSecs"
+			value="${algomgr.jms.priceCalcTimeoutSecs:60}" />
+		<property name="priceCalcTimeoutMultiplier"
+			value="${algomgr.jms.priceCalcTimeoutMultiplier:1}" />
+		<property name="paramFindTimeoutSecs"
+			value="${algomgr.jms.paramFindTimeoutSecs:180}" />
+		<property name="paramFindTimeoutMultiplier"
+			value="${algomgr.jms.paramFindTimeoutMultiplier:3}" />
+	</bean>
+
+	<bean id="algoMgrParamFindResponseTopic"
+		class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg index="0"
+			value="algoMgrParamFindResponse" />
+	</bean>
+
+	<bean id="algoMgrPriceCalcResponseTopic"
+		class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg index="0"
+			value="algoMgrPriceCalcResponse" />
+	</bean>
+
+	<jms:listener-container
+		connection-factory="algoMgrConnectionFactory" concurrency="5"
+		destination-type="topic">
+
+		<jms:listener id="algoMgrParamFindResponseListener"
+			destination="algoMgrParamFindResponse" ref="algoManagerConfiguration" />
+
+		<jms:listener id="algoMgrPriceCalcResponseListener"
+			destination="algoMgrPriceCalcResponse" ref="algoManagerConfiguration" />
+	</jms:listener-container>
+
+	<beans profile="externalModelEnabled">
+
+		<bean id="algoMgrExternalConnectionFactory"
+			class="org.springframework.jms.connection.CachingConnectionFactory">
+			<property name="sessionCacheSize" value="10" />
+			<property name="cacheConsumers" value="false" />
+			<property name="reconnectOnException" value="true" />
+			<property name="targetConnectionFactory">
+				<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+					<property name="brokerURL"
+						value="${algoMgr.external.broker.url}" />
+					<property name="trustAllPackages" value="true" />
+				</bean>
+			</property>
+		</bean>
+
+		<bean id="externalParamFindResponseTopic"
+			class="org.apache.activemq.command.ActiveMQTopic">
+			<constructor-arg index="0"
+				value="algoMgrParamFindResponse" />
+		</bean>
+
+		<bean id="externalPriceCalcResponseTopic"
+			class="org.apache.activemq.command.ActiveMQTopic">
+			<constructor-arg index="0"
+				value="algoMgrPriceCalcResponse" />
+		</bean>
+
+		<bean id="externalParamFindingTemplate"
+			class="org.springframework.jms.core.JmsTemplate">
+			<property name="connectionFactory"
+				ref="algoMgrExternalConnectionFactory" />
+			<property name="pubSubDomain" value="false" />
+			<property name="deliveryPersistent" value="false" />
+			<property name="explicitQosEnabled" value="true" />
+		</bean>
+
+		<bean id="externalPriceCalcTemplate"
+			class="org.springframework.jms.core.JmsTemplate">
+			<property name="connectionFactory"
+				ref="algoMgrExternalConnectionFactory" />
+			<property name="pubSubDomain" value="false" />
+			<property name="deliveryPersistent" value="false" />
+			<property name="explicitQosEnabled" value="true" />
+		</bean>
+
+		<jms:listener-container
+			connection-factory="algoMgrExternalConnectionFactory" concurrency="5"
+			destination-type="topic">
+
+			<jms:listener id="algoMgrJsonParamFindResponseListener"
+				destination="paramFindJsonResponse" ref="algoManagerConfiguration" />
+
+			<jms:listener id="algoMgrJsonPriceCalcResponseListener"
+				destination="priceCalcJsonResponse" ref="algoManagerConfiguration" />
+		</jms:listener-container>
+	</beans>
+
+</beans>

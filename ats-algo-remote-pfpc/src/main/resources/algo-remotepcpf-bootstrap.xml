@@ -1,0 +1,103 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:jms="http://www.springframework.org/schema/jms" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	default-autowire="byName">
+
+	<context:annotation-config />
+
+	<bean class="ats.spring.AtsPropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:algo-remotepcpf-defaults.properties</value>
+			</list>
+		</property>
+		<property name="ignoreResourceNotFound" value="true" />
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+	</bean>
+
+	<import resource="classpath:${algomgr.springBridgeContext:empty}.xml" />
+
+	<context:component-scan
+		base-package="${algomgr.springBridgeComponentScanPackage:nosuchpackage}" />
+	
+	<bean name="algoManagerSpringBridge" class="ats.algo.springbridge.SpringContextBridge" >
+	</bean>
+
+	<bean id="algoMgrConnectionFactory"
+		class="org.springframework.jms.connection.CachingConnectionFactory">
+		<property name="sessionCacheSize" value="10" />
+		<property name="cacheConsumers" value="false" />
+		<property name="reconnectOnException" value="true" />
+		<property name="targetConnectionFactory">
+			<bean class="org.apache.activemq.ActiveMQConnectionFactory">
+				<property name="brokerURL" value="${algoMgr.broker.url}" />
+				<property name="trustAllPackages" value="true" />
+			</bean>
+		</property>
+	</bean>
+
+	<bean name="algoMgrBetsyncCoordinator" class="ats.algo.remote.AlgoMgrRemotePfPcCoordinator"
+		init-method="init">
+		<property name="maxParamFindQueues" value="${algoMgr.maxParamFindQueues}" />
+		<property name="maxClassifiedParamFindThreads" value="${algoMgr.maxClassifiedParamFindThreads}" />
+		<property name="maxPriceCalcQueues" value="${algoMgr.maxPriceCalcQueues}" />
+		<property name="maxClassifiedPriceCalcThreads" value="${algoMgr.maxClassifiedPriceCalcThreads}" />
+		<property name="maxToleratedParamFindInMins" value="${algoMgr.maxToleratedParamFindInMins:5}" />
+		<property name="warningParamFindDurationInSecs" value="${algoMgr.warningParamFindDurationInSecs:150}" />
+	</bean>
+
+	<beans profile="paramFindEnabled">
+		<bean id="algoMgrParamFindResponseTopic" class="org.apache.activemq.command.ActiveMQTopic">
+			<constructor-arg index="0" value="algoMgrParamFindResponse" />
+		</bean>
+
+		<bean id="paramFindRequestQueue" class="org.apache.activemq.command.ActiveMQQueue">
+			<constructor-arg index="0" value="algoMgrParamFindReqs" />
+		</bean>
+
+		<bean id="paramFindingResponseTemplate" class="org.springframework.jms.core.JmsTemplate">
+			<property name="connectionFactory" ref="algoMgrConnectionFactory" />
+			<property name="defaultDestination" ref="algoMgrParamFindResponseTopic" />
+			<property name="pubSubDomain" value="true" />
+			<property name="deliveryPersistent" value="false" />
+			<property name="explicitQosEnabled" value="true" />
+		</bean>
+
+		<jms:listener-container connection-factory="algoMgrConnectionFactory"
+			destination-type="queue">
+			<jms:listener id="algoMgrParamFindReqListener"
+				destination="algoMgrParamFindReqs" ref="algoMgrBetsyncCoordinator" />
+		</jms:listener-container>
+	</beans>
+
+	<beans profile="priceCalcEnabled">
+		<bean id="algoMgrPriceCalcResponseTopic" class="org.apache.activemq.command.ActiveMQTopic">
+			<constructor-arg index="0" value="algoMgrPriceCalcResponse" />
+		</bean>
+
+		<bean id="priceCalcRequestQueue" class="org.apache.activemq.command.ActiveMQQueue">
+			<constructor-arg index="0" value="algoMgrPriceCalcReqs" />
+		</bean>
+
+		<bean id="priceCalcResponseTemplate" class="org.springframework.jms.core.JmsTemplate">
+			<property name="connectionFactory" ref="algoMgrConnectionFactory" />
+			<property name="defaultDestination" ref="algoMgrPriceCalcResponseTopic" />
+			<property name="pubSubDomain" value="true" />
+			<property name="deliveryPersistent" value="false" />
+			<property name="explicitQosEnabled" value="true" />
+		</bean>
+
+		<jms:listener-container connection-factory="algoMgrConnectionFactory"
+			destination-type="queue">
+			<jms:listener id="algoMgrPriceCalcReqListener"
+				destination="algoMgrPriceCalcReqs" ref="algoMgrBetsyncCoordinator" />
+		</jms:listener-container>
+	</beans>
+
+</beans>
