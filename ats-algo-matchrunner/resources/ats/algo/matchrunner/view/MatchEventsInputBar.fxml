@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.TextFlow?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="72.0" prefWidth="1334.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ats.algo.matchrunner.view.MatchEventsInputBarController">
+   <children>
+      <TextField fx:id="eventEntryBox" layoutX="419.0" layoutY="10.0" onAction="#onEventEntry" prefHeight="31.0" prefWidth="107.0" />
+      <Label fx:id="matchEventErrorMsg" layoutX="381.0" layoutY="50.0" text="Label" />
+      <Button layoutX="1063.0" layoutY="5.0" mnemonicParsing="false" onAction="#onParamFindButtonPressed" prefHeight="43.0" prefWidth="107.0" text="Find params" />
+      <Button layoutX="532.0" layoutY="11.0" mnemonicParsing="false" onAction="#onUndoLastButtonPressed" prefHeight="25.0" prefWidth="67.0" text="Undo last" />
+      <Button layoutX="910.0" layoutY="5.0" mnemonicParsing="false" onAction="#onShowResultedMarketsButtonPressed" prefHeight="43.0" prefWidth="137.0" text="Show resulted markets" />
+      <Button layoutX="780.0" layoutY="5.0" mnemonicParsing="false" onAction="#onTradingRulesButtonPressed" prefHeight="43.0" prefWidth="116.0" text="Show trading rules" />
+      <Button layoutX="658.0" layoutY="5.0" mnemonicParsing="false" onAction="#onSaveMatchButtonPressed" prefHeight="43.0" prefWidth="107.0" text="Save match..." />
+      <TextFlow fx:id="matchEventPrompt" layoutX="6.0" layoutY="11.0" prefHeight="57.0" prefWidth="403.0" textAlignment="RIGHT" />
+   </children>
+</AnchorPane>

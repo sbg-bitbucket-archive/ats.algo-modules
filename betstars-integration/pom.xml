@@ -1,0 +1,52 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-algo-sport-parent</artifactId>
+		<version>1.1779.206</version>
+		<relativePath>../ats-algo-sport-parent</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>betstars-integration</artifactId>
+	<name>Betstars Integration</name>
+
+	<properties>
+		<betstars.algo.version>0.100.0</betstars.algo.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-algomanager</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.betstars</groupId>
+			<artifactId>bs-algo-ats-integration</artifactId>
+			<version>${betstars.algo.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.betstars</groupId>
+			<artifactId>bs-algo-common</artifactId>
+			<version>${betstars.algo.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.betstars</groupId>
+			<artifactId>bs-algo-tennis</artifactId>
+			<version>${betstars.algo.version}</version>
+		</dependency>
+
+		<!-- <dependency>
+			<groupId>com.betstars</groupId>
+			<artifactId>bs-algo-volleyball</artifactId>
+			<version>${betstars.algo.version}</version>
+		</dependency> -->
+
+	</dependencies>
+
+</project>

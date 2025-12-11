@@ -1,0 +1,404 @@
+{
+  "PriceCalcRequest" : {
+    "eventId" : 149,
+    "eventSettings" : {
+      "generalEventSettings" : {
+        "eventTier" : {
+          "modifiable" : false,
+          "value" : "3"
+        }
+      }
+    },
+    "matchEngineClassName" : "ats.algo.sport.football.FootballMatchEngine",
+    "calcRequestCause" : "MATCH_INCIDENT",
+    "matchFormat" : {
+      "subClass" : "FootballMatchFormat",
+      "sportType" : "SOCCER",
+      "normalTimeMinutes" : 90,
+      "extraTimeMinutes" : 0,
+      "penaltiesPossible" : false,
+      "lastScore" : "0:0",
+      "matchLevel" : 3,
+      "awayGoalDouble" : true,
+      "shootOutNewFormat" : true,
+      "matchTwoLegs" : false,
+      "matchinSecondLeg" : false
+    },
+    "matchState" : {
+      "subClass" : "FootballMatchState",
+      "eventId" : 149,
+      "requestId" : "T1508428091792",
+      "clockTimeOfLastPriceCalc" : 1508428092640,
+      "clockTimeOfLastElapsedTimeFromIncident" : 1508428091793,
+      "dataFeedStatus" : "OK",
+      "clocktimeOfLastDatafeedMatchIncident" : 0,
+      "clockStatus" : "SET_MATCH_CLOCK",
+      "noSuccessfulInPlayParamFindsExecuted" : 0,
+      "datafeedStateMismatch" : false,
+      "dataToGenerateStaticMarkets" : {
+        "initialisationCompleted" : true,
+        "map" : {
+          "FT:SPRD" : "0"
+        }
+      },
+      "firstCardTimeSlot" : -1,
+      "firstCornerTimeSlot" : -1,
+      "normalHalfSecs" : 2700,
+      "extraHalfSecs" : 0,
+      "goalsA" : 0,
+      "goalsB" : 0,
+      "extraTimeFHGoalsA" : 0,
+      "extraTimeFHGoalsB" : 0,
+      "extraTimeSHGoalsA" : 0,
+      "extraTimeSHGoalsB" : 0,
+      "yellowCardA" : 0,
+      "yellowCardB" : 0,
+      "redCardA" : 0,
+      "redCardB" : 0,
+      "normalTimeGoalsA" : 0,
+      "normalTimeGoalsB" : 0,
+      "cornersA" : 0,
+      "cornersB" : 0,
+      "normalTimeCornersA" : 0,
+      "normalTimeCornersB" : 0,
+      "elapsedTimeSecs" : 10,
+      "elapsedTimeAtLastMatchIncidentSecs" : 10,
+      "elapsedTimeAtLastFootballMatchIncidentSecs" : -1,
+      "elapsedTimeThisPeriodSecs" : 10,
+      "matchPeriod" : [ "FootballMatchPeriod", "IN_FIRST_HALF" ],
+      "extraTimeEnteredFlag" : false,
+      "lastFiveMinsNO" : 0,
+      "fiveMinsNo" : 0,
+      "previousPeriodGoalsA" : 0,
+      "previousPeriodGoalsB" : 0,
+      "goalScoreInPeriodN" : [ {
+        "A" : 0,
+        "B" : 0
+      }, {
+        "A" : 0,
+        "B" : 0
+      } ],
+      "currentPeriodCornersA" : 0,
+      "currentPeriodCornersB" : 0,
+      "previousPeriodCornersA" : 0,
+      "previousPeriodCornersB" : 0,
+      "penaltyStatus" : "UNKNOWN",
+      "shootOutFirst" : "UNKNOWN",
+      "shooutOutCounterA" : 0,
+      "shooutOutCounterB" : 0,
+      "penaltyInfo" : {
+        "penaltyScoreA" : 0,
+        "penaltyScoreB" : 0,
+        "startedPenalty" : "UNKNOWN",
+        "shootingCounter" : 0,
+        "newOrder" : true,
+        "shootoutNext" : "UNKNOWN"
+      },
+      "shootOutTimeCounter" : 0,
+      "shootOutGoalsA" : 0,
+      "shootOutGoalsB" : 0,
+      "teamSheet" : {
+        "teamSheetMap" : {
+          "A.Player1" : {
+            "teamId" : "A",
+            "playerName" : "A.Player1",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player5" : {
+            "teamId" : "B",
+            "playerName" : "B.Player5",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player6" : {
+            "teamId" : "B",
+            "playerName" : "B.Player6",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player7" : {
+            "teamId" : "B",
+            "playerName" : "B.Player7",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player8" : {
+            "teamId" : "B",
+            "playerName" : "B.Player8",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player5" : {
+            "teamId" : "A",
+            "playerName" : "A.Player5",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player9" : {
+            "teamId" : "B",
+            "playerName" : "B.Player9",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player4" : {
+            "teamId" : "A",
+            "playerName" : "A.Player4",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player3" : {
+            "teamId" : "A",
+            "playerName" : "A.Player3",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player2" : {
+            "teamId" : "A",
+            "playerName" : "A.Player2",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player9" : {
+            "teamId" : "A",
+            "playerName" : "A.Player9",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player14" : {
+            "teamId" : "B",
+            "playerName" : "B.Player14",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player8" : {
+            "teamId" : "A",
+            "playerName" : "A.Player8",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player15" : {
+            "teamId" : "B",
+            "playerName" : "B.Player15",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player7" : {
+            "teamId" : "A",
+            "playerName" : "A.Player7",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player16" : {
+            "teamId" : "B",
+            "playerName" : "B.Player16",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player6" : {
+            "teamId" : "A",
+            "playerName" : "A.Player6",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player17" : {
+            "teamId" : "B",
+            "playerName" : "B.Player17",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "B.Player1" : {
+            "teamId" : "B",
+            "playerName" : "B.Player1",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player2" : {
+            "teamId" : "B",
+            "playerName" : "B.Player2",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player3" : {
+            "teamId" : "B",
+            "playerName" : "B.Player3",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player4" : {
+            "teamId" : "B",
+            "playerName" : "B.Player4",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player10" : {
+            "teamId" : "B",
+            "playerName" : "B.Player10",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player11" : {
+            "teamId" : "B",
+            "playerName" : "B.Player11",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player12" : {
+            "teamId" : "B",
+            "playerName" : "B.Player12",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "B.Player13" : {
+            "teamId" : "B",
+            "playerName" : "B.Player13",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player12" : {
+            "teamId" : "A",
+            "playerName" : "A.Player12",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player11" : {
+            "teamId" : "A",
+            "playerName" : "A.Player11",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player10" : {
+            "teamId" : "A",
+            "playerName" : "A.Player10",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player17" : {
+            "teamId" : "A",
+            "playerName" : "A.Player17",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player16" : {
+            "teamId" : "A",
+            "playerName" : "A.Player16",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player15" : {
+            "teamId" : "A",
+            "playerName" : "A.Player15",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player14" : {
+            "teamId" : "A",
+            "playerName" : "A.Player14",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player13" : {
+            "teamId" : "A",
+            "playerName" : "A.Player13",
+            "playerStatus" : "ON_THE_BENCH"
+          }
+        }
+      },
+      "firstCorner" : "UNKNOWN",
+      "injuryTime" : false
+    },
+    "matchParams" : {
+      "eventId" : 149,
+      "requestId" : "T1508428091792",
+      "requestTime" : 0,
+      "paramMap" : {
+        "goalTotal" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "BOTHCOMBINED",
+          "gaussian" : {
+            "mean" : 2.69,
+            "stdDevn" : 1.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "GOALS",
+          "minAllowedParamValue" : 0.0,
+          "maxAllowedParamValue" : 20.0,
+          "displayAsPercentage" : false
+        },
+        "goalSupremacy" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "BOTHDIFFERENCE",
+          "gaussian" : {
+            "mean" : 0.3,
+            "stdDevn" : 1.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "GOALS",
+          "minAllowedParamValue" : -8.0,
+          "maxAllowedParamValue" : 8.0,
+          "displayAsPercentage" : false
+        },
+        "homeLoseBoost" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "A",
+          "gaussian" : {
+            "mean" : 0.12,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "GOALS",
+          "minAllowedParamValue" : 0.0,
+          "maxAllowedParamValue" : 2.0,
+          "displayAsPercentage" : false
+        },
+        "awayLoseBoost" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "B",
+          "gaussian" : {
+            "mean" : 0.08,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "GOALS",
+          "minAllowedParamValue" : 0.0,
+          "maxAllowedParamValue" : 2.0,
+          "displayAsPercentage" : false
+        },
+        "targetGoalBoost" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "BOTHCOMBINED",
+          "gaussian" : {
+            "mean" : 0.4,
+            "stdDevn" : 0.1,
+            "bias" : 0.0
+          },
+          "marketGroup" : "GOALS",
+          "minAllowedParamValue" : 0.0,
+          "maxAllowedParamValue" : 1.0,
+          "displayAsPercentage" : false
+        },
+        "goalsDevn" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "BOTHCOMBINED",
+          "gaussian" : {
+            "mean" : 1.0,
+            "stdDevn" : 0.25,
+            "bias" : 0.0
+          },
+          "marketGroup" : "GOALS",
+          "minAllowedParamValue" : 0.0,
+          "maxAllowedParamValue" : 2.5,
+          "displayAsPercentage" : false
+        },
+        "cornerTotal" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "BOTHCOMBINED",
+          "gaussian" : {
+            "mean" : 11.0,
+            "stdDevn" : 1.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "CORNERS",
+          "minAllowedParamValue" : 5.0,
+          "maxAllowedParamValue" : 50.0,
+          "displayAsPercentage" : false
+        },
+        "cornerSupremacy" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "BOTHDIFFERENCE",
+          "gaussian" : {
+            "mean" : 1.0,
+            "stdDevn" : 1.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "CORNERS",
+          "minAllowedParamValue" : -20.0,
+          "maxAllowedParamValue" : 20.0,
+          "displayAsPercentage" : false
+        }
+      },
+      "originatingClassName" : "ats.algo.sport.football.FootballMatchParams"
+    },
+    "matchIncident" : {
+      "subClass" : "ElapsedTimeMatchIncident",
+      "undo" : false,
+      "elapsedTimeSecs" : 10,
+      "eventId" : 149,
+      "requestId" : "T1508428091792",
+      "timeStamp" : 0,
+      "incidentSubType" : "SET_MATCH_CLOCK"
+    },
+    "matchIncidentResult" : [ "FootballMatchPeriod", "IN_FIRST_HALF" ],
+    "requestId" : "T1508428091792",
+    "requestTime" : 1508428091792,
+    "uniqueRequestId" : "R-048c5ca2-6092-41c3-a238-e5dc04d5f44f",
+    "versionId" : "1.2.2"
+  }
+}

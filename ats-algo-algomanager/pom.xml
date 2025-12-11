@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-algo-parent</artifactId>
+		<version>1.1779.206</version>
+		<relativePath>../ats-algo-parent</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ats-algo-algomanager</artifactId>
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-algomanager-base</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>jms</artifactId>
+			<version>1.1</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-client</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.geronimo.specs</groupId>
+					<artifactId>geronimo-jms_1.1_spec</artifactId>
+				</exclusion>
+				<!-- 
+				<exclusion>
+					<groupId>org.apache.geronimo.specs</groupId>
+					<artifactId>geronimo-j2ee-management_1.1_spec</artifactId>
+				</exclusion>
+				 -->
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-matchengineframework</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-paramfind</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-dto</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-montecarloframework</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-core-springcontextbridge</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-darts</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.takari.junit</groupId>
+			<artifactId>takari-cpsuite</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-afl</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-football</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-icehockey</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-floorball</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-bandy</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-basketball</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-fieldhockey</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-rollerhockey</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-futsal</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-volleyball</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-snooker</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-handball</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-tabletennis</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-badminton</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-beachvolleyball</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-squash</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-bowls</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-baseball</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-tennis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-tennisG</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-rugbyunion</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-rugbyleague</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-cricket</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-loadtestsport</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-americanfootball</artifactId>
+		</dependency>		
+		
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-testcricket</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-tradingrules</artifactId>
+		</dependency>
+
+		<!-- <dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-sport-outrights</artifactId>			
+		</dependency> -->
+	</dependencies>
+
+</project>

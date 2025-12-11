@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-base</artifactId>
+		<version>48</version>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ats-algo-parent</artifactId>
+	<version>1.1779.206</version>  <!-- CHANGE VERSION -->
+	<name>The ATS Algo Modules Parent</name>
+	<description>The parent artifact which contains main settings for all ATS Algo Module projects</description>
+	<packaging>pom</packaging>
+
+	<properties>
+		<!-- Pulled from surefire configuration due to a known issue -->
+		<argLine>-XX:MaxPermSize=512m</argLine>
+		<!--<argLine>-XX:-UseSplitVerifier</argLine> -->
+		<algo.module.version>${project.version}</algo.module.version>
+		<spring.version>3.2.13.RELEASE</spring.version>
+		<activemq.version>5.14.0</activemq.version>
+		<ignite.version>1.9.0</ignite.version>
+		<log4j2.version>2.17.1</log4j2.version>
+	</properties>
+
+  <profiles>
+		<profile>
+			<id>default</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<distributionManagement>
+				<repository>
+					<id>ats-releases</id>
+					<name>ATS releases</name>
+					<url>https://artifactory.amelco.co.uk/artifactory/ats-releases</url>
+				</repository>
+				<snapshotRepository>
+					<id>ats-snapshots</id>
+					<name>ATS snapshots</name>
+					<url>https://artifactory.amelco.co.uk/artifactory/ats-snapshots</url>
+				</snapshotRepository>
+			</distributionManagement>
+		</profile>
+	</profiles>
+
+	<dependencies>
+
+        <dependency>
+            <groupId>ats-pokerstars</groupId>
+            <artifactId>ats-json</artifactId>
+            <version>14.0.3</version>
+			<exclusions>
+				<exclusion>
+					<groupId>ats-pokerstars</groupId>
+					<artifactId>ats-foundation</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.googlecode.json-simple</groupId>
+					<artifactId>json-simple</artifactId>
+				</exclusion>
+			</exclusions>
+        </dependency>
+
+		<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+			<exclusions>
+				<exclusion>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+        <dependency>
+            <groupId>com.lmax</groupId>
+            <artifactId>disruptor</artifactId>
+            <version>3.4.2</version>
+        </dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-logging</artifactId>
+			<version>9</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.logging.log4j</groupId>
+					<artifactId>*</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-jcl</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-1.2-api</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-jul</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>${log4j2.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-util2</artifactId>
+			<version>3</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>jms</artifactId>
+			<version>1.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+
+	<dependencyManagement>
+		<!-- manage versions of key third party libs -->
+
+		<dependencies>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-core-springcontextbridge</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-customer-dependencies</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-momentum</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-tradingrules</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-paramfind</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-margining</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-matchrunner</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-montecarloframework</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-matchengineframework</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-genericfunctions</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-loadtestsport</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-algomanager</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-algomanager-base</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-cache</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-integration</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-dto</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-afl</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-tennis</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-tennisG</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-darts</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-football</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-icehockey</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-floorball</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-bandy</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-fieldhockey</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-basketball</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-rollerhockey</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-rugbyunion</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-rugbyleague</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-volleyball</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-handball</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-snooker</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-tabletennis</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-badminton</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-beachvolleyball</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-squash</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-baseball</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-americanfootball</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-bowls</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-cricket</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-testcricket</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-futsal</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<!-- <dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-outrights</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-outrights-calcengine</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-outrights-api</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-outrights-gui</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-sport-outrights-server</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency> -->
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-xsd-util</artifactId>
+				<version>1.0.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-spring</artifactId>
+				<version>1.4.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ps-algo-tennis</artifactId>
+				<version>${algo.module.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.takari.junit</groupId>
+				<artifactId>takari-cpsuite</artifactId>
+				<version>1.2.7</version>
+			</dependency>
+
+		</dependencies>
+
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- build tests jar so code used in other modules -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<skipIfEmpty>true</skipIfEmpty>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<ajdtVersion>none</ajdtVersion>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>com.googlecode</groupId>
+					<artifactId>maven-idea-plugin</artifactId>
+					<version>1.6</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.14.1</version>
+					<configuration>
+						<systemProperties>
+							<property>
+								<name>ats.env</name>
+								<value>nonJndi</value>
+							</property>
+						</systemProperties>
+					</configuration>
+					<dependencies>
+						<!-- Force surefire to use JUnit4 -->
+						<dependency>
+							<groupId>org.apache.maven.surefire</groupId>
+							<artifactId>surefire-junit47</artifactId>
+							<version>2.14.1</version>
+						</dependency>
+					</dependencies>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>versions-maven-plugin</artifactId>
+					<version>1.3</version>
+				</plugin>
+
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+
+			</plugins>
+
+		</pluginManagement>
+
+	</build>
+
+</project>

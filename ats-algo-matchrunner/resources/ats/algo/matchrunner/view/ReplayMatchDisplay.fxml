@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="680.0" prefWidth="793.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ats.algo.matchrunner.view.ReplayMatchDisplayController">
+   <center>
+      <AnchorPane>
+         <children>
+            <AnchorPane prefHeight="617.0" prefWidth="544.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <SplitPane dividerPositions="0.5777496839443742" prefHeight="617.0" prefWidth="544.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="100.0" prefHeight="627.0" prefWidth="194.0">
+                           <children>
+                              <TitledPane animated="false" collapsible="false" prefHeight="627.0" prefWidth="462.0" text="Recorded actions" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TableView fx:id="actionsTable" prefHeight="603.0" prefWidth="452.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <columns>
+                                              <TableColumn fx:id="actionsTableColumn" prefWidth="600.0" text="Action" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </TitledPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <SplitPane dividerPositions="0.4944" layoutX="108.0" layoutY="201.0" orientation="VERTICAL" prefHeight="551.0" prefWidth="376.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TitledPane fx:id="requestDetail" animated="false" collapsible="false" layoutX="36.0" layoutY="23.0" prefHeight="271.0" prefWidth="374.0" text="Request detail" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextArea fx:id="requestDetailText" layoutX="48.0" layoutY="27.0" prefHeight="282.0" prefWidth="327.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </TitledPane>
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <TitledPane fx:id="responseDetail" animated="false" collapsible="false" prefHeight="429.0" prefWidth="430.0" text="Response detail" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                   <children>
+                                                      <TextArea fx:id="responseDetailText" layoutX="49.0" layoutY="14.0" prefHeight="289.0" prefWidth="327.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                   </children>
+                                                </AnchorPane>
+                                            </content>
+                                          </TitledPane>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="51.0" prefWidth="544.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button layoutX="31.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleNextActionButtonPressed" text="Next action" />
+            <TextField fx:id="fastFwdActionNoText" layoutX="278.0" layoutY="10.0" onAction="#onFastFwdEventNoEntry" prefHeight="25.0" prefWidth="52.0" />
+            <Label layoutX="124.0" layoutY="15.0" text="Fast forward to action no:" textAlignment="RIGHT" />
+            <Label fx:id="fastFwdMsg" layoutX="343.0" layoutY="17.0" prefHeight="17.0" prefWidth="245.0" />
+            <Button layoutX="364.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleJumpToFirstMatchIncident" prefHeight="25.0" prefWidth="167.0" text="Jump to first match incident" />
+            <Button layoutX="549.0" layoutY="11.0" mnemonicParsing="false" onAction="#onFullDetailPressed" text="Show full detail" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

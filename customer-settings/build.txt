@@ -1,0 +1,6 @@
+# Examples PS build from inside the ps-algo-tennis module
+
+mkdir ~/.m2-ps-algo
+mvn --settings ../customer-settings/ps-settings.xml clean install
+
+

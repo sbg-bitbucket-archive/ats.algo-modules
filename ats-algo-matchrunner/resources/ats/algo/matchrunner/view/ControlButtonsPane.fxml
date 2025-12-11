@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ats.algo.matchrunner.view.ControlButtonsPaneController">
+   <children>      
+      <Button fx:id="saveMatch" layoutX="20.0" layoutY="90.0" mnemonicParsing="false" onAction="#onSaveMatchButtonPressed" prefWidth="160.0" text="[S]ave match..." />
+      <Button layoutX="20.0" layoutY="30.0" mnemonicParsing="false" onAction="#onTradingRulesButtonPressed" prefWidth="160.0" text="[T]rading rules..." />
+      <Button layoutX="20.0" layoutY="60.0" mnemonicParsing="false" onAction="#onShowResultedMarketsButtonPressed" prefWidth="160.0" text="[R]esulted markets..." />
+      <Button fx:id="paramFind" layoutX="20.0" mnemonicParsing="false" onAction="#onParamFindButtonPressed" prefWidth="160.0" text="[P]aram find..." />
+      <Button fx:id="manualResult" layoutX="20.0" layoutY="120.0" mnemonicParsing="false" onAction="#onManualResultButtonPressed" prefWidth="160.0" text="[M]anual Result..." />
+      <Button fx:id="buildABet" layoutX="20.0" layoutY="150.0" mnemonicParsing="false" onAction="#onBuildABetButtonPressed" prefWidth="160.0" text="[B]uild a Bet..." />
+      
+      <Line endX="200.0" layoutY="-10.0" />
+   </children>
+</AnchorPane>

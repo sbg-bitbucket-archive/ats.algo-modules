@@ -1,0 +1,147 @@
+package ats.algo.algomanager;
+
+import java.util.Map;
+import java.util.Set;
+
+import org.junit.After;
+import org.junit.Before;
+
+import ats.algo.core.MarketGroup;
+import ats.algo.core.baseclasses.GenericMatchParams;
+import ats.algo.core.baseclasses.MatchParams;
+import ats.algo.core.baseclasses.SimpleMatchState;
+import ats.algo.core.common.SupportedSportType;
+import ats.algo.core.comparetomarket.ParamFindResults;
+import ats.algo.core.markets.Markets;
+import ats.algo.core.markets.ResultedMarkets;
+import ats.algo.core.matchresult.MatchResultMap;
+import ats.algo.core.recordplayback.RecordedItem;
+import ats.algo.core.recordplayback.Recording;
+import ats.algo.core.timestamp.TimeStamp;
+import ats.algo.core.traderalert.TraderAlert;
+import ats.algo.core.tradingrules.SetSuspensionStatusTradingRule;
+import ats.core.util.log.Level;
+import ats.core.util.log.LogUtil;
+
+/**
+ * Base class for use when writing unit tests for AlgoManager
+ * 
+ * @author Geoff
+ *
+ */
+public class AlgoManagerSimpleTestBase implements AlgoManagerPublishable {
+
+    protected AlgoManager algoManager;
+    protected AlgoManagerConfiguration algoManagerConfiguration;
+    protected volatile MatchParams publishedMatchParams;
+    protected volatile SimpleMatchState publishedMatchState;
+    protected volatile Markets publishedMarkets;
+    protected volatile ResultedMarkets publishedResultedMarkets;
+    protected volatile ParamFindResults publishedParamFinderResults;
+    protected volatile MatchResultMap matchResultProforma;
+    protected volatile Boolean publishedNotifyEventCompleted;
+    protected volatile Set<String> keysForDiscontinuedMarkets;
+    protected volatile Recording recording;
+    protected volatile TraderAlert traderAlert;
+    protected volatile EventStateBlob publishedEventStateBlob;
+    protected volatile TimeStamp publishedTimeStamp;
+    protected volatile GenericMatchParams publishedUpdatedMatchParams;
+    protected volatile Boolean publishedEventLevelShouldSuspend;
+    protected volatile Boolean fatalErrorNotified;
+    protected volatile Map<String, String> publishedProperties;
+
+    @Before
+    public void beforeEachTest() {
+        /*
+         * define the various functions that AlgoManager is going to need
+         */
+
+        LogUtil.initConsoleLogging(Level.TRACE);
+
+        algoManagerConfiguration = new SimpleAlgoManagerConfiguration();
+        SupportedSportsInitialisation.init();
+        /*
+         * instantiate AlgoManager and tell it what functions use to calc prices and report the results
+         */
+
+        algoManager = new AlgoManager(algoManagerConfiguration, this);
+        SetSuspensionStatusTradingRule[] tradingRules = new SetSuspensionStatusTradingRule[0];
+        algoManager.setTradingRules(SupportedSportType.TENNIS, tradingRules);
+        recording = new Recording();
+    }
+
+    @After
+    public void afterEachTest() {
+        algoManager.close();
+    }
+
+
+
+    @Override
+    public void publishMatchParams(long eventId, GenericMatchParams matchParams) {
+        this.publishedMatchParams = matchParams.generateXxxMatchParams();
+    }
+
+    @Override
+    public void publishMatchState(long eventId, SimpleMatchState matchState) {
+        this.publishedMatchState = matchState;
+    }
+
+    @Override
+    public void publishMarkets(long eventId, Markets markets, Set<String> keysForDiscontinuedMarkets,
+                    TimeStamp timeStamp, String sequenceId) {
+        this.publishedMarkets = markets;
+        this.keysForDiscontinuedMarkets = keysForDiscontinuedMarkets;
+        this.publishedTimeStamp = timeStamp;
+    }
+
+    @Override
+    public void publishResultedMarkets(long eventId, ResultedMarkets resultedMarkets) {
+        this.publishedResultedMarkets = resultedMarkets;
+    }
+
+    @Override
+    public void publishParamFindResults(long eventId, ParamFindResults paramFindResults, GenericMatchParams matchParams,
+                    long elapsedTimeMs) {
+        this.publishedParamFinderResults = paramFindResults;
+        this.publishedUpdatedMatchParams = matchParams;
+    }
+
+    @Override
+    public void notifyEventCompleted(long eventId, boolean isCompleted) {
+        this.publishedNotifyEventCompleted = isCompleted;
+    }
+
+
+    @Override
+    public void publishRecordedItem(long eventId, RecordedItem recordedItem) {
+        recording.add(recordedItem);
+    }
+
+
+
+    @Override
+    public void publishTraderAlert(long eventId, TraderAlert traderAlert) {
+        this.traderAlert = traderAlert;
+    }
+
+    @Override
+    public void publishEventState(long eventId, EventStateBlob eventStateBlob) {
+        this.publishedEventStateBlob = eventStateBlob;
+    }
+
+    @Override
+    public void publishEventSuspensionStatus(long eventId, boolean shouldSuspend, Set<MarketGroup> marketGroups) {
+        this.publishedEventLevelShouldSuspend = shouldSuspend;
+    }
+
+    @Override
+    public void notifyFatalError(long eventId, String requestId, String errorCause) {
+        fatalErrorNotified = true;
+    }
+
+    @Override
+    public void publishEventProperties(long eventId, Map<String, String> properties) {
+        this.publishedProperties = properties;
+    }
+}

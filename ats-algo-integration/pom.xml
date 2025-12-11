@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-algo-parent</artifactId>
+		<version>1.1779.206</version>
+		<relativePath>../ats-algo-parent</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ats-algo-integration</artifactId>
+	<name>ATS Algo Integration</name>
+
+	<dependencies>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-algomanager</artifactId>
+			</dependency>
+			
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-algo-cache</artifactId>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-spring</artifactId>
+			</dependency>
+								
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-util2</artifactId>
+				<version>3</version>
+			</dependency>
+
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-betsync-client</artifactId>
+				<exclusions>
+					<exclusion>
+						<groupId>ats</groupId>
+						<artifactId>ats-betsync-dtos</artifactId>
+					</exclusion>
+				</exclusions>			
+				<version>38</version>
+			</dependency>
+			
+				<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+					<artifactId>okhttp</artifactId>
+						<version>3.14.4</version>
+					</dependency>
+			
+			<dependency>
+				<groupId>ats</groupId>
+				<artifactId>ats-influxdb</artifactId>
+				<version>2</version>
+			</dependency>
+			
+			<dependency>
+    			<groupId>ats-pokerstars</groupId>
+    			<artifactId>ats-betsync-dtos</artifactId>
+    			<version>84.86</version>
+   			</dependency>
+			    
+	</dependencies>
+
+</project>

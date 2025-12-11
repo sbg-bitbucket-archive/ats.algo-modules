@@ -1,0 +1,12 @@
+package ats.algo.sport.tennis;
+
+enum GameOrTieBreakEventResult {
+    POINTWONA,
+    POINTWONB,
+    GAMEWONA,
+    GAMEWONB,
+    SUPERTIEBREAKSETWONA,
+    SUPERTIEBREAKSETWONB,
+    PENALTYMATCHWONA,
+    PENALTYMATCHWONB
+}

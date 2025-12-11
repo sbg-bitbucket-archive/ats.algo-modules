@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-algo-parent</artifactId>
+		<version>1.1779.206</version>
+		<relativePath>../ats-algo-parent</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ats-algo-algomanager-base</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.jms</groupId>
+			<artifactId>jms</artifactId>
+			<scope>provided</scope>
+			<version>1.1</version>
+		</dependency>
+ 	
+		<dependency>
+			<groupId>org.apache.activemq</groupId>
+			<artifactId>activemq-client</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.geronimo.specs</groupId>
+					<artifactId>geronimo-jms_1.1_spec</artifactId>
+				</exclusion>
+				<!-- 
+				<exclusion>
+					<groupId>org.apache.geronimo.specs</groupId>
+					<artifactId>geronimo-j2ee-management_1.1_spec</artifactId>
+				</exclusion>
+				 -->
+			</exclusions>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-matchengineframework</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-paramfind</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-dto</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-montecarloframework</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-core-springcontextbridge</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>io.takari.junit</groupId>
+			<artifactId>takari-cpsuite</artifactId>
+		</dependency>
+	
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-tradingrules</artifactId>
+		</dependency>
+		
+	</dependencies>
+
+</project>

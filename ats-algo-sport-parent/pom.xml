@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-algo-parent</artifactId>
+		<version>1.1779.206</version>
+		<relativePath>../ats-algo-parent</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ats-algo-sport-parent</artifactId>
+	<name>The ATS Algo Modules Parent for specific sports</name>
+	<description>The parent artifact which contains main settings for all ATS Algo Module projects</description>
+	<packaging>pom</packaging>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-margining</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-paramfind</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-momentum</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-matchrunner</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-genericfunctions</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-matchengineframework</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-montecarloframework</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<profiles>
+	<profile>
+		<id>default</id>
+                        <distributionManagement>
+                                <repository>
+                                        <id>ats-releases</id>
+                                        <name>ATS releases</name>
+                                        <url>https://artifactory.amelco.co.uk/artifactory/ats-releases</url>
+                                </repository>
+                                <snapshotRepository>
+                                        <id>ats-snapshots</id>
+                                        <name>ATS snapshots</name>
+                                        <url>https://artifactory.amelco.co.uk/artifactory/ats-snapshots</url>
+                                </snapshotRepository>
+                        </distributionManagement>
+
+	</profile>
+	</profiles>
+
+</project>
+

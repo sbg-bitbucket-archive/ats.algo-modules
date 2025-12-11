@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-algo-parent</artifactId>
+		<version>1.1779.206</version>
+		<relativePath>../ats-algo-parent</relativePath>
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>ats-algo-matchrunner</artifactId>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-paramfind</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-algomanager-base</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.squareup.okhttp3</groupId>
+			<artifactId>okhttp</artifactId>
+			<version>3.14.4</version>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-matchengineframework</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-genericfunctions</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>
+					ats-algo-core-springcontextbridge
+				</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>
+					ats-algo-sport-buildabet
+				</artifactId>
+			<version>1.1734.0</version>
+			<exclusions>
+				<exclusion>
+					<groupId>ats</groupId>
+					<artifactId>ats-json</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<build>
+
+		<sourceDirectory>src</sourceDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.1</version>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>resources</directory>
+				<includes>
+					<include>ats/algo/matchrunner/view/ControlButtonsPane.fxml</include>
+					<include>ats/algo/matchrunner/view/ControlsLayout.fxml</include>
+					<include>ats/algo/matchrunner/view/EmptyControlsPane.fxml</include>
+					<include>ats/algo/matchrunner/view/HistoryDisplayDialog.fxml</include>
+					<include>ats/algo/matchrunner/view/IncidentsPaneOld.fxml</include>
+					<include>ats/algo/matchrunner/view/IncidentsPaneV2.fxml</include>
+					<include>ats/algo/matchrunner/view/MatchEventsInputBar.fxml</include>
+					<include>ats/algo/matchrunner/view/MatchFormatDialog.fxml</include>
+					<include>ats/algo/matchrunner/view/MatchOverview.fxml</include>
+					<include>ats/algo/matchrunner/view/ParamFindDialog.fxml</include>
+					<include>ats/algo/matchrunner/view/PrematchResultDialog.fxml</include>
+					<include>ats/algo/matchrunner/view/ReplayMatchDisplay.fxml</include>
+					<include>ats/algo/matchrunner/view/ResultedMarketsDisplay.fxml</include>
+					<include>ats/algo/matchrunner/view/RootLayout.fxml</include>
+					<include>ats/algo/matchrunner/view/TimerControlsPane.fxml</include>
+					<include>ats/algo/matchrunner/view/TradingRulesDisplay.fxml</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+</project>

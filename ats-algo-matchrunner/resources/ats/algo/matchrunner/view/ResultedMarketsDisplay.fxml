@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="542.0" prefWidth="1008.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ats.algo.matchrunner.view.ResultedMarketsDisplayController">
+	<children>
+		<TitledPane animated="false" layoutX="149.0" layoutY="49.0" prefHeight="398.0" prefWidth="555.0" text="Generated markets" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<content>
+				<SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+					<items>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+							<children>
+								<TableView fx:id="marketsAwaitingResultTable" layoutX="196.0" layoutY="42.0" prefHeight="284.0" prefWidth="836.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<columns>
+										<TableColumn fx:id="mktTypeColumn" prefWidth="67.0" text="Type" />
+										<TableColumn fx:id="mktSubTypeColumn" prefWidth="60.0" text="LineId" />
+										<TableColumn fx:id="mktSequenceIdColumn" prefWidth="95.5" text="SequenceId" />
+										<TableColumn fx:id="mktDescriptionColumn" prefWidth="189.5" text="Description" />
+										<TableColumn fx:id="mktActualLineColumn" prefWidth="141.0" text="Actual Line" />
+										<TableColumn fx:id="mktWinningSelectionColumn" prefWidth="441.0" text="" />
+									</columns>
+								</TableView>
+								
+							</children>
+						</AnchorPane>
+						<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+							<children>
+								<TableView fx:id="resultedMarketsTable" layoutX="196.0" layoutY="42.0" prefHeight="284.0" prefWidth="836.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+									<columns>
+										<TableColumn fx:id="typeColumn" prefWidth="67.0" text="Type" />
+										<TableColumn fx:id="subTypeColumn" prefWidth="60.0" text="LineId" />
+										<TableColumn fx:id="sequenceIdColumn" prefWidth="95.5" text="SequenceId" />
+										<TableColumn fx:id="descriptionColumn" prefWidth="189.5" text="Description" />
+										<TableColumn fx:id="actualLineColumn" prefWidth="141.0" text="Actual Line" />
+										<TableColumn fx:id="winningSelectionColumn" prefWidth="441.0" text="Winning Selection(s)" />
+									</columns>
+								</TableView>
+							</children>
+						</AnchorPane>
+					</items>
+				</SplitPane>
+			</content>
+		</TitledPane>
+       <TextField fx:id="resultMarketFilter" layoutX="554.0" onAction="#onEventEntry" prefHeight="23.0" prefWidth="344.0" promptText="Filter market type or winning selection" />
+                             
+                             
+	</children>
+</AnchorPane>

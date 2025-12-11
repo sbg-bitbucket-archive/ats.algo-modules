@@ -1,0 +1,613 @@
+{
+  "ParamFindRequest" : {
+    "eventId" : 123,
+    "eventSettings" : {
+      "generalEventSettings" : {
+        "eventTier" : {
+          "modifiable" : true,
+          "value" : "3"
+        }
+      }
+    },
+    "calcModelType" : "EXTERNAL_MODEL",
+    "matchFormat" : {
+      "subClass" : "FootballMatchFormat",
+      "sportType" : "SOCCER",
+      "normalTimeMinutes" : 90,
+      "extraTimeMinutes" : 0,
+      "penaltiesPossible" : false,
+      "lastScore" : "0:0",
+      "matchLevel" : 3,
+      "awayGoalDouble" : true,
+      "shootOutNewFormat" : true,
+      "matchinSecondLeg" : false,
+      "matchTwoLegs" : false
+    },
+    "matchState" : {
+      "subClass" : "FootballSimpleMatchState",
+      "preMatch" : true,
+      "matchCompleted" : false,
+      "matchPeriod" : [ "FootballMatchPeriod", "PREMATCH" ],
+      "elapsedTimeSeconds" : 0,
+      "goalsA" : 0,
+      "goalsB" : 0,
+      "cornersA" : 0,
+      "cornersB" : 0,
+      "yellowCardsA" : 0,
+      "yellowCardsB" : 0,
+      "redCardsA" : 0,
+      "redCardsB" : 0,
+      "firstHalfGoalsA" : 0,
+      "firstHalfGoalsB" : 0,
+      "secondHalfGoalsA" : 0,
+      "secondHalfGoalsB" : 0,
+      "teamSheet" : {
+        "teamSheetMap" : {
+          "A.Player1" : {
+            "teamId" : "A",
+            "playerName" : "A.Player1",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player5" : {
+            "teamId" : "B",
+            "playerName" : "B.Player5",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player6" : {
+            "teamId" : "B",
+            "playerName" : "B.Player6",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player7" : {
+            "teamId" : "B",
+            "playerName" : "B.Player7",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player8" : {
+            "teamId" : "B",
+            "playerName" : "B.Player8",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player5" : {
+            "teamId" : "A",
+            "playerName" : "A.Player5",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player9" : {
+            "teamId" : "B",
+            "playerName" : "B.Player9",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player4" : {
+            "teamId" : "A",
+            "playerName" : "A.Player4",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player3" : {
+            "teamId" : "A",
+            "playerName" : "A.Player3",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player2" : {
+            "teamId" : "A",
+            "playerName" : "A.Player2",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player9" : {
+            "teamId" : "A",
+            "playerName" : "A.Player9",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player14" : {
+            "teamId" : "B",
+            "playerName" : "B.Player14",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player8" : {
+            "teamId" : "A",
+            "playerName" : "A.Player8",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player15" : {
+            "teamId" : "B",
+            "playerName" : "B.Player15",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player7" : {
+            "teamId" : "A",
+            "playerName" : "A.Player7",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player16" : {
+            "teamId" : "B",
+            "playerName" : "B.Player16",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player6" : {
+            "teamId" : "A",
+            "playerName" : "A.Player6",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player17" : {
+            "teamId" : "B",
+            "playerName" : "B.Player17",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "B.Player1" : {
+            "teamId" : "B",
+            "playerName" : "B.Player1",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player2" : {
+            "teamId" : "B",
+            "playerName" : "B.Player2",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player3" : {
+            "teamId" : "B",
+            "playerName" : "B.Player3",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player4" : {
+            "teamId" : "B",
+            "playerName" : "B.Player4",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player10" : {
+            "teamId" : "B",
+            "playerName" : "B.Player10",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player11" : {
+            "teamId" : "B",
+            "playerName" : "B.Player11",
+            "playerStatus" : "PLAYING"
+          },
+          "B.Player12" : {
+            "teamId" : "B",
+            "playerName" : "B.Player12",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "B.Player13" : {
+            "teamId" : "B",
+            "playerName" : "B.Player13",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player12" : {
+            "teamId" : "A",
+            "playerName" : "A.Player12",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player11" : {
+            "teamId" : "A",
+            "playerName" : "A.Player11",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player10" : {
+            "teamId" : "A",
+            "playerName" : "A.Player10",
+            "playerStatus" : "PLAYING"
+          },
+          "A.Player17" : {
+            "teamId" : "A",
+            "playerName" : "A.Player17",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player16" : {
+            "teamId" : "A",
+            "playerName" : "A.Player16",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player15" : {
+            "teamId" : "A",
+            "playerName" : "A.Player15",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player14" : {
+            "teamId" : "A",
+            "playerName" : "A.Player14",
+            "playerStatus" : "ON_THE_BENCH"
+          },
+          "A.Player13" : {
+            "teamId" : "A",
+            "playerName" : "A.Player13",
+            "playerStatus" : "ON_THE_BENCH"
+          }
+        }
+      },
+      "shootoutInfo" : {
+        "penaltyScoreA" : 0,
+        "penaltyScoreB" : 0,
+        "startedPenalty" : "UNKNOWN",
+        "shootingCounter" : 0,
+        "newOrder" : true,
+        "shootoutNext" : "UNKNOWN"
+      },
+      "eventId" : 123,
+      "goalScorerNames" : { }
+    },
+    "matchParams" : {
+      "eventId" : 123,
+      "requestTime" : 0,
+      "paramMap" : {
+        "HomeScoreRate" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "A",
+          "gaussian" : {
+            "mean" : 1.0,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "NOT_SPECIFIED",
+          "minAllowedParamValue" : 0.001,
+          "maxAllowedParamValue" : 10.0,
+          "displayAsPercentage" : false
+        },
+        "AwayScoreRate" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "B",
+          "gaussian" : {
+            "mean" : 1.0,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "NOT_SPECIFIED",
+          "minAllowedParamValue" : 0.001,
+          "maxAllowedParamValue" : 10.0,
+          "displayAsPercentage" : false
+        },
+        "HomeLoseBoost" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "A",
+          "gaussian" : {
+            "mean" : 0.0,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "NOT_SPECIFIED",
+          "minAllowedParamValue" : -0.999,
+          "maxAllowedParamValue" : 10.0,
+          "displayAsPercentage" : false
+        },
+        "AwayLoseBoost" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "B",
+          "gaussian" : {
+            "mean" : 0.0,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "NOT_SPECIFIED",
+          "minAllowedParamValue" : -0.999,
+          "maxAllowedParamValue" : 10.0,
+          "displayAsPercentage" : false
+        },
+        "TimeBoost" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "BOTHCOMBINED",
+          "gaussian" : {
+            "mean" : 0.5,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "NOT_SPECIFIED",
+          "minAllowedParamValue" : 0.001,
+          "maxAllowedParamValue" : 0.999,
+          "displayAsPercentage" : false
+        },
+        "WinBoost" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "BOTHCOMBINED",
+          "gaussian" : {
+            "mean" : 0.0,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "NOT_SPECIFIED",
+          "minAllowedParamValue" : -0.999,
+          "maxAllowedParamValue" : 10.0,
+          "displayAsPercentage" : false
+        },
+        "HomeShootoutProbability" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "A",
+          "gaussian" : {
+            "mean" : 0.5,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "NOT_SPECIFIED",
+          "minAllowedParamValue" : 0.001,
+          "maxAllowedParamValue" : 0.999,
+          "displayAsPercentage" : false
+        },
+        "AwayShootoutProbability" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "B",
+          "gaussian" : {
+            "mean" : 0.5,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "NOT_SPECIFIED",
+          "minAllowedParamValue" : 0.001,
+          "maxAllowedParamValue" : 0.999,
+          "displayAsPercentage" : false
+        },
+        "HomeCornersRate" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "A",
+          "gaussian" : {
+            "mean" : 5.0,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "NOT_SPECIFIED",
+          "minAllowedParamValue" : 0.001,
+          "maxAllowedParamValue" : 20.0,
+          "displayAsPercentage" : false
+        },
+        "AwayCornersRate" : {
+          "subClass" : "Standard",
+          "matchParameterType" : "B",
+          "gaussian" : {
+            "mean" : 5.0,
+            "stdDevn" : 0.0,
+            "bias" : 0.0
+          },
+          "marketGroup" : "NOT_SPECIFIED",
+          "minAllowedParamValue" : 0.001,
+          "maxAllowedParamValue" : 20.0,
+          "displayAsPercentage" : false
+        }
+      },
+      "originatingClassName" : "ats.algo.core.baseclasses.GenericMatchParams"
+    },
+    "marketPricesList" : {
+      "eventId" : 0,
+      "requestId" : "spf1510997776539",
+      "generateDetailedParamFindLog" : false,
+      "marketPricesList" : {
+        "BetVictor" : {
+          "marketPrices" : {
+            "FT:AXB_M" : {
+              "valid" : true,
+              "type" : "FT:AXB",
+              "marketDescription" : "Match Result",
+              "category" : "GENERAL",
+              "selections" : {
+                "A" : 2.3,
+                "B" : 2.87,
+                "Draw" : 3.5
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            },
+            "FT:OU_M" : {
+              "valid" : true,
+              "type" : "FT:OU",
+              "marketDescription" : "Totals",
+              "category" : "OVUN",
+              "lineId" : "2.5",
+              "selections" : {
+                "Over" : 1.6,
+                "Under" : 2.3
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            }
+          },
+          "sourceWeight" : 1.0
+        },
+        "IBC" : {
+          "marketPrices" : {
+            "FT:AXB_M" : {
+              "valid" : true,
+              "type" : "FT:AXB",
+              "marketDescription" : "Match Result",
+              "category" : "GENERAL",
+              "selections" : {
+                "A" : 2.3,
+                "B" : 2.87,
+                "Draw" : 3.5
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            },
+            "FT:OU_M" : {
+              "valid" : true,
+              "type" : "FT:OU",
+              "marketDescription" : "Totals",
+              "category" : "OVUN",
+              "lineId" : "2.5",
+              "selections" : {
+                "Over" : 1.6,
+                "Under" : 2.3
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            }
+          },
+          "sourceWeight" : 1.0
+        },
+        "ISN" : {
+          "marketPrices" : {
+            "FT:AXB_M" : {
+              "valid" : true,
+              "type" : "FT:AXB",
+              "marketDescription" : "Match Result",
+              "category" : "GENERAL",
+              "selections" : {
+                "A" : 2.3,
+                "B" : 2.87,
+                "Draw" : 3.5
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            },
+            "FT:OU_M" : {
+              "valid" : true,
+              "type" : "FT:OU",
+              "marketDescription" : "Totals",
+              "category" : "OVUN",
+              "lineId" : "2.5",
+              "selections" : {
+                "Over" : 1.6,
+                "Under" : 2.3
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            }
+          },
+          "sourceWeight" : 1.0
+        },
+        "SBO" : {
+          "marketPrices" : {
+            "FT:AXB_M" : {
+              "valid" : true,
+              "type" : "FT:AXB",
+              "marketDescription" : "Match Result",
+              "category" : "GENERAL",
+              "selections" : {
+                "A" : 2.3,
+                "B" : 2.87,
+                "Draw" : 3.5
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            },
+            "FT:OU_M" : {
+              "valid" : true,
+              "type" : "FT:OU",
+              "marketDescription" : "Totals",
+              "category" : "OVUN",
+              "lineId" : "2.5",
+              "selections" : {
+                "Over" : 1.6,
+                "Under" : 2.3
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            }
+          },
+          "sourceWeight" : 1.0
+        },
+        "SkyBet" : {
+          "marketPrices" : {
+            "FT:AXB_M" : {
+              "valid" : true,
+              "type" : "FT:AXB",
+              "marketDescription" : "Match Result",
+              "category" : "GENERAL",
+              "selections" : {
+                "A" : 2.3,
+                "B" : 2.87,
+                "Draw" : 3.5
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            },
+            "FT:OU_M" : {
+              "valid" : true,
+              "type" : "FT:OU",
+              "marketDescription" : "Totals",
+              "category" : "OVUN",
+              "lineId" : "2.5",
+              "selections" : {
+                "Over" : 1.6,
+                "Under" : 2.3
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            }
+          },
+          "sourceWeight" : 1.0
+        },
+        "a12Bet" : {
+          "marketPrices" : {
+            "FT:AXB_M" : {
+              "valid" : true,
+              "type" : "FT:AXB",
+              "marketDescription" : "Match Result",
+              "category" : "GENERAL",
+              "selections" : {
+                "A" : 2.3,
+                "B" : 2.87,
+                "Draw" : 3.5
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            },
+            "FT:OU_M" : {
+              "valid" : true,
+              "type" : "FT:OU",
+              "marketDescription" : "Totals",
+              "category" : "OVUN",
+              "lineId" : "2.5",
+              "selections" : {
+                "Over" : 1.6,
+                "Under" : 2.3
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            }
+          },
+          "sourceWeight" : 1.0
+        },
+        "a188Bet" : {
+          "marketPrices" : {
+            "FT:AXB_M" : {
+              "valid" : true,
+              "type" : "FT:AXB",
+              "marketDescription" : "Match Result",
+              "category" : "GENERAL",
+              "selections" : {
+                "A" : 2.3,
+                "B" : 2.87,
+                "Draw" : 3.5
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            },
+            "FT:OU_M" : {
+              "valid" : true,
+              "type" : "FT:OU",
+              "marketDescription" : "Totals",
+              "category" : "OVUN",
+              "lineId" : "2.5",
+              "selections" : {
+                "Over" : 1.6,
+                "Under" : 2.3
+              },
+              "sequenceId" : "M",
+              "marketWeight" : 1.0,
+              "timeStamp" : 1510997776501
+            }
+          },
+          "sourceWeight" : 1.0
+        }
+      }
+    },
+    "matchEngineSavedState" : {
+      "subClass" : "ats.algo.core.baseclasses.MatchEngineSavedState",
+      "savedState" : "{\"oldState\":{\"bsClass\":\"com.betstars.algo.soccer.engine.model.MatchStateSoccer\",\"matchParamMap\":null,\"eventId\":0,\"matchPeriod\":\"PREMATCH\",\"teamScoringLastGoal\":\"UNKNOWN\",\"teamScoringLastCorner\":\"UNKNOWN\",\"teamTakingFirstPenalty\":\"UNKNOWN\",\"elapsedTimeSecs\":0,\"elapsedTimeThisPeriodSecs\":0,\"injuryTime\":false,\"reachedExtraTime\":false,\"reachedShootouts\":false,\"goalsA\":0,\"goalsB\":0,\"firstHalfGoalsA\":0,\"firstHalfGoalsB\":0,\"secondHalfGoalsA\":0,\"secondHalfGoalsB\":0,\"extratimeFirstHalfGoalsA\":0,\"extratimeFirstHalfGoalsB\":0,\"extratimeSecondHalfGoalsA\":0,\"extratimeSecondHalfGoalsB\":0,\"shootoutsTaken\":0,\"shootoutsHome\":0,\"shootoutsAway\":0,\"shootoutsAttemptedHome\":0,\"shootoutsAttemptedAway\":0,\"goalsAFirstLeg\":0,\"goalsBFirstLeg\":0,\"yellowCardA\":0,\"yellowCardB\":0,\"redCardA\":0,\"redCardB\":0,\"cornersA\":0,\"cornersB\":0,\"firstHalfCornersA\":0,\"firstHalfCornersB\":0,\"secondHalfCornersA\":0,\"secondHalfCornersB\":0,\"extratimeFirstHalfCornersA\":0,\"extratimeFirstHalfCornersB\":0,\"extratimeSecondHalfCornersA\":0,\"extratimeSecondHalfCornersB\":0,\"goalsList\":[],\"cornersList\":[],\"shootoutsList\":[]},\"resultingData\":{\"marketsNotYetResulted\":{\"FT:OU:M:2.5\":{\"uniqueKey\":\"FT:OU:M:2.5\",\"marketType\":\"FT:OU\",\"sequenceId\":\"M\",\"lineId\":\"2.5\",\"marketDescription\":\"Total Goals\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CLSIT-A:P2:X\":{\"uniqueKey\":\"P:CLSIT-A:P2:X\",\"marketType\":\"P:CLSIT-A\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\" Second Half Team A Clean Sheet (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:HFG:M:X\":{\"uniqueKey\":\"FT:HFG:M:X\",\"marketType\":\"FT:HFG\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Half With First Goal\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TG:P1:X\":{\"uniqueKey\":\"P:TG:P1:X\",\"marketType\":\"P:TG\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Exact Total Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:TC3:M:10\":{\"uniqueKey\":\"FT:TC3:M:10\",\"marketType\":\"FT:TC3\",\"sequenceId\":\"M\",\"lineId\":\"10\",\"marketDescription\":\"Total Match Corners 3 ways\",\"category\":\"OVUNEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:TG:M:X\":{\"uniqueKey\":\"FT:TG:M:X\",\"marketType\":\"FT:TG\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Exact Total Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:ETS2G:M:X\":{\"uniqueKey\":\"FT:ETS2G:M:X\",\"marketType\":\"FT:ETS2G\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Either Team To Score 2 or more Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:TGIT-A:M:X\":{\"uniqueKey\":\"FT:TGIT-A:M:X\",\"marketType\":\"FT:TGIT-A\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team A Exact Total Goals (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AXBBTS:M:X\":{\"uniqueKey\":\"FT:AXBBTS:M:X\",\"marketType\":\"FT:AXBBTS\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Match Odds and Both Teams to Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:CHF:P1:X\":{\"uniqueKey\":\"FT:CHF:P1:X\",\"marketType\":\"FT:CHF\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"Corners Half Time/Full Time\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:SPRD:M:2\":{\"uniqueKey\":\"FT:SPRD:M:2\",\"marketType\":\"FT:SPRD\",\"sequenceId\":\"M\",\"lineId\":\"2\",\"marketDescription\":\"Handicap Match Result\",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:AOU:P1:0.75\":{\"uniqueKey\":\"P:AOU:P1:0.75\",\"marketType\":\"P:AOU\",\"sequenceId\":\"P1\",\"lineId\":\"0.75\",\"marketDescription\":\"First Half Asian Total Goals\",\"category\":\"OVUNASIAN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:SPRD:M:3\":{\"uniqueKey\":\"FT:SPRD:M:3\",\"marketType\":\"FT:SPRD\",\"sequenceId\":\"M\",\"lineId\":\"3\",\"marketDescription\":\"Handicap Match Result\",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:SPRD:M:0\":{\"uniqueKey\":\"FT:SPRD:M:0\",\"marketType\":\"FT:SPRD\",\"sequenceId\":\"M\",\"lineId\":\"0\",\"marketDescription\":\"Handicap Match Result\",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:DCBTS:M:X\":{\"uniqueKey\":\"FT:DCBTS:M:X\",\"marketType\":\"FT:DCBTS\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Double Chance and Both Teams To Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:SPRD:P1:-1\":{\"uniqueKey\":\"P:SPRD:P1:-1\",\"marketType\":\"P:SPRD\",\"sequenceId\":\"P1\",\"lineId\":\"-1\",\"marketDescription\":\"First Half Handicap \",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:CLSIT-A:M:X\":{\"uniqueKey\":\"FT:CLSIT-A:M:X\",\"marketType\":\"FT:CLSIT-A\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team A Clean Sheet (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:SPRD:M:1\":{\"uniqueKey\":\"FT:SPRD:M:1\",\"marketType\":\"FT:SPRD\",\"sequenceId\":\"M\",\"lineId\":\"1\",\"marketDescription\":\"Handicap Match Result\",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:SPRD:P1:-2\":{\"uniqueKey\":\"P:SPRD:P1:-2\",\"marketType\":\"P:SPRD\",\"sequenceId\":\"P1\",\"lineId\":\"-2\",\"marketDescription\":\"First Half Handicap \",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AHCAP:G1:-0.25\":{\"uniqueKey\":\"FT:AHCAP:G1:-0.25\",\"marketType\":\"FT:AHCAP\",\"sequenceId\":\"G1\",\"lineId\":\"-0.25\",\"marketDescription\":\"Asian Handicap\",\"category\":\"HCAPASIAN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AOU:M:2\":{\"uniqueKey\":\"FT:AOU:M:2\",\"marketType\":\"FT:AOU\",\"sequenceId\":\"M\",\"lineId\":\"2\",\"marketDescription\":\"Asian Total Goals\",\"category\":\"OVUNASIAN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:ETS2G:P2:X\":{\"uniqueKey\":\"P:ETS2G:P2:X\",\"marketType\":\"P:ETS2G\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Either Team To Score 2 or more Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AXBOU4.5:M:X\":{\"uniqueKey\":\"FT:AXBOU4.5:M:X\",\"marketType\":\"FT:AXBOU4.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Match Odds and Over/Under 4.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:S2G-A:M:X\":{\"uniqueKey\":\"FT:S2G-A:M:X\",\"marketType\":\"FT:S2G-A\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team A To Score 2 or more Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WFBIT-B:M:X\":{\"uniqueKey\":\"FT:WFBIT-B:M:X\",\"marketType\":\"FT:WFBIT-B\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team B Win From Behind (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TGIT:P1:X\":{\"uniqueKey\":\"P:TGIT:P1:X\",\"marketType\":\"P:TGIT\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Exact Total Goals (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:COU-A:P2:2.5\":{\"uniqueKey\":\"P:COU-A:P2:2.5\",\"marketType\":\"P:COU-A\",\"sequenceId\":\"P2\",\"lineId\":\"2.5\",\"marketDescription\":\"Team A Total Second Half Corners\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:AXBOU3.5:P1:X\":{\"uniqueKey\":\"P:AXBOU3.5:P1:X\",\"marketType\":\"P:AXBOU3.5\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Result and Over/Under 3.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BHOU1.5:M:X\":{\"uniqueKey\":\"FT:BHOU1.5:M:X\",\"marketType\":\"FT:BHOU1.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Both Halves Over/Under 1.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TC3:P1:5\":{\"uniqueKey\":\"P:TC3:P1:5\",\"marketType\":\"P:TC3\",\"sequenceId\":\"P1\",\"lineId\":\"5\",\"marketDescription\":\"Total First Half Corners\",\"category\":\"OVUNEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:LC:M:X\":{\"uniqueKey\":\"FT:LC:M:X\",\"marketType\":\"FT:LC\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Last Corner\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CSPRD:P1:-0.5\":{\"uniqueKey\":\"P:CSPRD:P1:-0.5\",\"marketType\":\"P:CSPRD\",\"sequenceId\":\"P1\",\"lineId\":\"-0.5\",\"marketDescription\":\"First Half Handicap Corners\",\"category\":\"HCAP\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AXBBTSIT:M:X\":{\"uniqueKey\":\"FT:AXBBTSIT:M:X\",\"marketType\":\"FT:AXBBTSIT\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Match Odds and Both Teams to Score IT\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BTOU1.5:M:X\":{\"uniqueKey\":\"FT:BTOU1.5:M:X\",\"marketType\":\"FT:BTOU1.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Both Teams Over/Under 1.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:OU:P1:0.5\":{\"uniqueKey\":\"P:OU:P1:0.5\",\"marketType\":\"P:OU\",\"sequenceId\":\"P1\",\"lineId\":\"0.5\",\"marketDescription\":\"First Half Total Goals\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AXBOU1.5:M:X\":{\"uniqueKey\":\"FT:AXBOU1.5:M:X\",\"marketType\":\"FT:AXBOU1.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Match Odds and Over/Under 1.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:NG:G1:X\":{\"uniqueKey\":\"FT:NG:G1:X\",\"marketType\":\"FT:NG\",\"sequenceId\":\"G1\",\"lineId\":null,\"marketDescription\":\"First Team to Score/Next Goal\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TG-A:P1:X\":{\"uniqueKey\":\"P:TG-A:P1:X\",\"marketType\":\"P:TG-A\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Exact Total Goals Team A\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BTSOU2.5:M:X\":{\"uniqueKey\":\"FT:BTSOU2.5:M:X\",\"marketType\":\"FT:BTSOU2.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"BTTS and Over/Under 2.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:HCAP2:P1:0.5\":{\"uniqueKey\":\"P:HCAP2:P1:0.5\",\"marketType\":\"P:HCAP2\",\"sequenceId\":\"P1\",\"lineId\":\"0.5\",\"marketDescription\":\"First Half Handicap Two Ways \",\"category\":\"HCAP\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:CSIT:M:X\":{\"uniqueKey\":\"FT:CSIT:M:X\",\"marketType\":\"FT:CSIT\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Correct Score IT\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WTNIT-A:M:X\":{\"uniqueKey\":\"FT:WTNIT-A:M:X\",\"marketType\":\"FT:WTNIT-A\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team A Win to Nil (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CS:P1:X\":{\"uniqueKey\":\"P:CS:P1:X\",\"marketType\":\"P:CS\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Correct Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:DNBOU3.5:M:X\":{\"uniqueKey\":\"FT:DNBOU3.5:M:X\",\"marketType\":\"FT:DNBOU3.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Draw No Bet and Over/Under 3.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CLSIT-B:P1:X\":{\"uniqueKey\":\"P:CLSIT-B:P1:X\",\"marketType\":\"P:CLSIT-B\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Team B Clean Sheet (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TGOE:P2:X\":{\"uniqueKey\":\"P:TGOE:P2:X\",\"marketType\":\"P:TGOE\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Total Goals Odd/Even\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:OU-B:P1:0.5\":{\"uniqueKey\":\"P:OU-B:P1:0.5\",\"marketType\":\"P:OU-B\",\"sequenceId\":\"P1\",\"lineId\":\"0.5\",\"marketDescription\":\"First Half Total Goals Team B\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:WTN:P1:X\":{\"uniqueKey\":\"P:WTN:P1:X\",\"marketType\":\"P:WTN\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half To Win to Nil\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:BTS:P2:X\":{\"uniqueKey\":\"P:BTS:P2:X\",\"marketType\":\"P:BTS\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Both Teams To Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AXBOU3.5:M:X\":{\"uniqueKey\":\"FT:AXBOU3.5:M:X\",\"marketType\":\"FT:AXBOU3.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Match Odds and Over/Under 3.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:OU:M:3.5\":{\"uniqueKey\":\"FT:OU:M:3.5\",\"marketType\":\"FT:OU\",\"sequenceId\":\"M\",\"lineId\":\"3.5\",\"marketDescription\":\"Total Goals\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:CS:M:X\":{\"uniqueKey\":\"FT:CS:M:X\",\"marketType\":\"FT:CS\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Correct Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:TFG:M:X\":{\"uniqueKey\":\"FT:TFG:M:X\",\"marketType\":\"FT:TFG\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Time of First Goal\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:DNB:P1:X\":{\"uniqueKey\":\"P:DNB:P1:X\",\"marketType\":\"P:DNB\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Draw no Bet\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TG:P2:X\":{\"uniqueKey\":\"P:TG:P2:X\",\"marketType\":\"P:TG\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Exact Total Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:WTNIT-B:P2:X\":{\"uniqueKey\":\"P:WTNIT-B:P2:X\",\"marketType\":\"P:WTNIT-B\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Team B Win to Nil (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:OU:P2:0.5\":{\"uniqueKey\":\"P:OU:P2:0.5\",\"marketType\":\"P:OU\",\"sequenceId\":\"P2\",\"lineId\":\"0.5\",\"marketDescription\":\"Second Half Total Goals\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WBHIT-B:M:X\":{\"uniqueKey\":\"FT:WBHIT-B:M:X\",\"marketType\":\"FT:WBHIT-B\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team B Wins Both Halves (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:DNBBTS:M:X\":{\"uniqueKey\":\"FT:DNBBTS:M:X\",\"marketType\":\"FT:DNBBTS\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Draw No Bet and Both Teams to Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TG-B:P1:X\":{\"uniqueKey\":\"P:TG-B:P1:X\",\"marketType\":\"P:TG-B\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Exact Total Goals Team B\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:AXBOU1.5:P1:X\":{\"uniqueKey\":\"P:AXBOU1.5:P1:X\",\"marketType\":\"P:AXBOU1.5\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Result and Over/Under 1.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:HF:P1:X\":{\"uniqueKey\":\"FT:HF:P1:X\",\"marketType\":\"FT:HF\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"Half Time/Full Time\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:AXBOU2.5:P1:X\":{\"uniqueKey\":\"P:AXBOU2.5:P1:X\",\"marketType\":\"P:AXBOU2.5\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Result and Over/Under 2.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AXB:M:X\":{\"uniqueKey\":\"FT:AXB:M:X\",\"marketType\":\"FT:AXB\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Match Result\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:FC:M:X\":{\"uniqueKey\":\"FT:FC:M:X\",\"marketType\":\"FT:FC\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"First Corner\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:TG-A:M:X\":{\"uniqueKey\":\"FT:TG-A:M:X\",\"marketType\":\"FT:TG-A\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team A Exact Total Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WTN:M:X\":{\"uniqueKey\":\"FT:WTN:M:X\",\"marketType\":\"FT:WTN\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"To Win to Nil\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:ETS2G:P1:X\":{\"uniqueKey\":\"P:ETS2G:P1:X\",\"marketType\":\"P:ETS2G\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Either Team To Score 2 or more Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:S3G-A:M:X\":{\"uniqueKey\":\"FT:S3G-A:M:X\",\"marketType\":\"FT:S3G-A\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team A To Score 3 or more Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:AXB:P2:X\":{\"uniqueKey\":\"P:AXB:P2:X\",\"marketType\":\"P:AXB\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Result\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WM:M:X\":{\"uniqueKey\":\"FT:WM:M:X\",\"marketType\":\"FT:WM\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Winning Margin\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:CLS:M:X\":{\"uniqueKey\":\"FT:CLS:M:X\",\"marketType\":\"FT:CLS\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Clean Sheet\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:COU-B:P1:2.5\":{\"uniqueKey\":\"P:COU-B:P1:2.5\",\"marketType\":\"P:COU-B\",\"sequenceId\":\"P1\",\"lineId\":\"2.5\",\"marketDescription\":\"Team B Total First Half Corners\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TGIT:P2:X\":{\"uniqueKey\":\"P:TGIT:P2:X\",\"marketType\":\"P:TGIT\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Exact Total Goals (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:FTS3:M:X\":{\"uniqueKey\":\"FT:FTS3:M:X\",\"marketType\":\"FT:FTS3\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"First Team to Score 3 Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:COU-B:M:4.5\":{\"uniqueKey\":\"FT:COU-B:M:4.5\",\"marketType\":\"FT:COU-B\",\"sequenceId\":\"M\",\"lineId\":\"4.5\",\"marketDescription\":\"Team B Total Match Corners\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TC3:P2:5\":{\"uniqueKey\":\"P:TC3:P2:5\",\"marketType\":\"P:TC3\",\"sequenceId\":\"P2\",\"lineId\":\"5\",\"marketDescription\":\"Total Second Half Corners\",\"category\":\"OVUNEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:CLSIT-B:M:X\":{\"uniqueKey\":\"FT:CLSIT-B:M:X\",\"marketType\":\"FT:CLSIT-B\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team B Clean Sheet (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WEHIT-B:M:X\":{\"uniqueKey\":\"FT:WEHIT-B:M:X\",\"marketType\":\"FT:WEHIT-B\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team B Wins Either Half(IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TCOE:P2:X\":{\"uniqueKey\":\"P:TCOE:P2:X\",\"marketType\":\"P:TCOE\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Total Corners Odd/Even\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AHCAP:G1:0.25\":{\"uniqueKey\":\"FT:AHCAP:G1:0.25\",\"marketType\":\"FT:AHCAP\",\"sequenceId\":\"G1\",\"lineId\":\"0.25\",\"marketDescription\":\"Asian Handicap\",\"category\":\"HCAPASIAN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:OU-A:P2:0.5\":{\"uniqueKey\":\"P:OU-A:P2:0.5\",\"marketType\":\"P:OU-A\",\"sequenceId\":\"P2\",\"lineId\":\"0.5\",\"marketDescription\":\"Second Half Total Goals Team A\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:LTS:M:X\":{\"uniqueKey\":\"FT:LTS:M:X\",\"marketType\":\"FT:LTS\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Last Team to Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:COU:M:9.5\":{\"uniqueKey\":\"FT:COU:M:9.5\",\"marketType\":\"FT:COU\",\"sequenceId\":\"M\",\"lineId\":\"9.5\",\"marketDescription\":\"Corners Under / Over\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:SPRD:M:-2\":{\"uniqueKey\":\"FT:SPRD:M:-2\",\"marketType\":\"FT:SPRD\",\"sequenceId\":\"M\",\"lineId\":\"-2\",\"marketDescription\":\"Handicap Match Result\",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:SPRD:M:-1\":{\"uniqueKey\":\"FT:SPRD:M:-1\",\"marketType\":\"FT:SPRD\",\"sequenceId\":\"M\",\"lineId\":\"-1\",\"marketDescription\":\"Handicap Match Result\",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:SPRD:M:-3\":{\"uniqueKey\":\"FT:SPRD:M:-3\",\"marketType\":\"FT:SPRD\",\"sequenceId\":\"M\",\"lineId\":\"-3\",\"marketDescription\":\"Handicap Match Result\",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:OU:M:0.5\":{\"uniqueKey\":\"FT:OU:M:0.5\",\"marketType\":\"FT:OU\",\"sequenceId\":\"M\",\"lineId\":\"0.5\",\"marketDescription\":\"Total Goals\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TGOE:P1:X\":{\"uniqueKey\":\"P:TGOE:P1:X\",\"marketType\":\"P:TGOE\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Total Goals Odd/Even\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:BTS:P1:X\":{\"uniqueKey\":\"P:BTS:P1:X\",\"marketType\":\"P:BTS\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Both Teams To Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:OU:M:4.5\":{\"uniqueKey\":\"FT:OU:M:4.5\",\"marketType\":\"FT:OU\",\"sequenceId\":\"M\",\"lineId\":\"4.5\",\"marketDescription\":\"Total Goals\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:WTN:P2:X\":{\"uniqueKey\":\"P:WTN:P2:X\",\"marketType\":\"P:WTN\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half To Win to Nil\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:DC:P2:X\":{\"uniqueKey\":\"P:DC:P2:X\",\"marketType\":\"P:DC\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Double Chance\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:CAXB:M:X\":{\"uniqueKey\":\"FT:CAXB:M:X\",\"marketType\":\"FT:CAXB\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Corners Match Bet\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:HCAP2:M:-0.5\":{\"uniqueKey\":\"FT:HCAP2:M:-0.5\",\"marketType\":\"FT:HCAP2\",\"sequenceId\":\"M\",\"lineId\":\"-0.5\",\"marketDescription\":\"Handicap Two Ways\",\"category\":\"HCAP\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:DC:M:X\":{\"uniqueKey\":\"FT:DC:M:X\",\"marketType\":\"FT:DC\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Double Chance\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CAXB:P1:X\":{\"uniqueKey\":\"P:CAXB:P1:X\",\"marketType\":\"P:CAXB\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Corners Match Bet\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:DNB:P2:X\":{\"uniqueKey\":\"P:DNB:P2:X\",\"marketType\":\"P:DNB\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Draw No Bet\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:DNBOU1.5:M:X\":{\"uniqueKey\":\"FT:DNBOU1.5:M:X\",\"marketType\":\"FT:DNBOU1.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Draw No Bet and Over/Under 1.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CSIT:P1:X\":{\"uniqueKey\":\"P:CSIT:P1:X\",\"marketType\":\"P:CSIT\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Correct Score IT\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:WTNIT-B:P1:X\":{\"uniqueKey\":\"P:WTNIT-B:P1:X\",\"marketType\":\"P:WTNIT-B\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Team B Win to Nil (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:HMG:M:X\":{\"uniqueKey\":\"FT:HMG:M:X\",\"marketType\":\"FT:HMG\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Half With Most Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:COU:P1:4.5\":{\"uniqueKey\":\"P:COU:P1:4.5\",\"marketType\":\"P:COU\",\"sequenceId\":\"P1\",\"lineId\":\"4.5\",\"marketDescription\":\"First Half Corners Under / Over\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:FTS2:M:X\":{\"uniqueKey\":\"FT:FTS2:M:X\",\"marketType\":\"FT:FTS2\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"First Team to Score 2 Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AHCAP:G1:0\":{\"uniqueKey\":\"FT:AHCAP:G1:0\",\"marketType\":\"FT:AHCAP\",\"sequenceId\":\"G1\",\"lineId\":\"0\",\"marketDescription\":\"Asian Handicap\",\"category\":\"HCAPASIAN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BTSOU4.5:M:X\":{\"uniqueKey\":\"FT:BTSOU4.5:M:X\",\"marketType\":\"FT:BTSOU4.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"BTTS and Over/Under 4.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BHOU3.5:M:X\":{\"uniqueKey\":\"FT:BHOU3.5:M:X\",\"marketType\":\"FT:BHOU3.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Both Halves Over/Under 3.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:DNBOU4.5:M:X\":{\"uniqueKey\":\"FT:DNBOU4.5:M:X\",\"marketType\":\"FT:DNBOU4.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Draw No Bet and Over/Under 4.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TG-B:P2:X\":{\"uniqueKey\":\"P:TG-B:P2:X\",\"marketType\":\"P:TG-B\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Exact Total Goals Team B\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:WTNIT-A:P1:X\":{\"uniqueKey\":\"P:WTNIT-A:P1:X\",\"marketType\":\"P:WTNIT-A\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Team A Win to Nil (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BTSBH:P1:X\":{\"uniqueKey\":\"FT:BTSBH:P1:X\",\"marketType\":\"FT:BTSBH\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"Both Teams To Score in Both Halves\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AXBOU2.5:M:X\":{\"uniqueKey\":\"FT:AXBOU2.5:M:X\",\"marketType\":\"FT:AXBOU2.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Match Odds and Over/Under 2.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:HCAP2:P2:0.5\":{\"uniqueKey\":\"P:HCAP2:P2:0.5\",\"marketType\":\"P:HCAP2\",\"sequenceId\":\"P2\",\"lineId\":\"0.5\",\"marketDescription\":\"Second Half Handicap Two Ways \",\"category\":\"HCAP\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WTNIT-B:M:X\":{\"uniqueKey\":\"FT:WTNIT-B:M:X\",\"marketType\":\"FT:WTNIT-B\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team B Win to Nil (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:AXBBTS:P2:X\":{\"uniqueKey\":\"P:AXBBTS:P2:X\",\"marketType\":\"P:AXBBTS\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Result and Both Teams To Score Second Half\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:AXB:P1:X\":{\"uniqueKey\":\"P:AXB:P1:X\",\"marketType\":\"P:AXB\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Result\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:NTS:M:X\":{\"uniqueKey\":\"FT:NTS:M:X\",\"marketType\":\"FT:NTS\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Number of Teams to Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:COU-A:P1:2.5\":{\"uniqueKey\":\"P:COU-A:P1:2.5\",\"marketType\":\"P:COU-A\",\"sequenceId\":\"P1\",\"lineId\":\"2.5\",\"marketDescription\":\"Team A Total First Half Corners\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AOU:M:1.75\":{\"uniqueKey\":\"FT:AOU:M:1.75\",\"marketType\":\"FT:AOU\",\"sequenceId\":\"M\",\"lineId\":\"1.75\",\"marketDescription\":\"Asian Total Goals\",\"category\":\"OVUNASIAN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:AHCAP:G1:0\":{\"uniqueKey\":\"P:AHCAP:G1:0\",\"marketType\":\"P:AHCAP\",\"sequenceId\":\"G1\",\"lineId\":\"0\",\"marketDescription\":\"First Half Asian Handicap\",\"category\":\"HCAPASIAN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:S2G-B:M:X\":{\"uniqueKey\":\"FT:S2G-B:M:X\",\"marketType\":\"FT:S2G-B\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team B To Score 2 or more Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CLS:P2:X\":{\"uniqueKey\":\"P:CLS:P2:X\",\"marketType\":\"P:CLS\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Clean Sheet\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:SPRD:P1:0\":{\"uniqueKey\":\"P:SPRD:P1:0\",\"marketType\":\"P:SPRD\",\"sequenceId\":\"P1\",\"lineId\":\"0\",\"marketDescription\":\"First Half Handicap \",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:OU-B:P2:0.5\":{\"uniqueKey\":\"P:OU-B:P2:0.5\",\"marketType\":\"P:OU-B\",\"sequenceId\":\"P2\",\"lineId\":\"0.5\",\"marketDescription\":\"Second Half Total Goals Team B\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:DNB:M:X\":{\"uniqueKey\":\"FT:DNB:M:X\",\"marketType\":\"FT:DNB\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Draw No Bet\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:TGOE:M:X\":{\"uniqueKey\":\"FT:TGOE:M:X\",\"marketType\":\"FT:TGOE\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Total Goals Odd/Even\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:SPRD:P1:1\":{\"uniqueKey\":\"P:SPRD:P1:1\",\"marketType\":\"P:SPRD\",\"sequenceId\":\"P1\",\"lineId\":\"1\",\"marketDescription\":\"First Half Handicap \",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:SPRD:P1:2\":{\"uniqueKey\":\"P:SPRD:P1:2\",\"marketType\":\"P:SPRD\",\"sequenceId\":\"P1\",\"lineId\":\"2\",\"marketDescription\":\"First Half Handicap \",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TCOE:P1:X\":{\"uniqueKey\":\"P:TCOE:P1:X\",\"marketType\":\"P:TCOE\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Total Corners Odd/Even\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WFBIT-A:M:X\":{\"uniqueKey\":\"FT:WFBIT-A:M:X\",\"marketType\":\"FT:WFBIT-A\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team A Win From Behind (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:OU-A:M:0.5\":{\"uniqueKey\":\"FT:OU-A:M:0.5\",\"marketType\":\"FT:OU-A\",\"sequenceId\":\"M\",\"lineId\":\"0.5\",\"marketDescription\":\"Team A Total Goals\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:COU-A:M:4.5\":{\"uniqueKey\":\"FT:COU-A:M:4.5\",\"marketType\":\"FT:COU-A\",\"sequenceId\":\"M\",\"lineId\":\"4.5\",\"marketDescription\":\"Team A Total Match Corners\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:OU:M:1.5\":{\"uniqueKey\":\"FT:OU:M:1.5\",\"marketType\":\"FT:OU\",\"sequenceId\":\"M\",\"lineId\":\"1.5\",\"marketDescription\":\"Total Goals\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:OU-A:P1:0.5\":{\"uniqueKey\":\"P:OU-A:P1:0.5\",\"marketType\":\"P:OU-A\",\"sequenceId\":\"P1\",\"lineId\":\"0.5\",\"marketDescription\":\"First Half Total Goals Team A\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CS:P2:X\":{\"uniqueKey\":\"P:CS:P2:X\",\"marketType\":\"P:CS\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Correct Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:OU-B:M:0.5\":{\"uniqueKey\":\"FT:OU-B:M:0.5\",\"marketType\":\"FT:OU-B\",\"sequenceId\":\"M\",\"lineId\":\"0.5\",\"marketDescription\":\"Team B Total Goals\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WBHIT-A:M:X\":{\"uniqueKey\":\"FT:WBHIT-A:M:X\",\"marketType\":\"FT:WBHIT-A\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team A Wins Both Halves (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:DC:P1:X\":{\"uniqueKey\":\"P:DC:P1:X\",\"marketType\":\"P:DC\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Double Chance\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CLSIT-A:P1:X\":{\"uniqueKey\":\"P:CLSIT-A:P1:X\",\"marketType\":\"P:CLSIT-A\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\" First Half Team A Clean Sheet (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BHOU2.5:M:X\":{\"uniqueKey\":\"FT:BHOU2.5:M:X\",\"marketType\":\"FT:BHOU2.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Both Halves Over/Under 2.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CSIT:P2:X\":{\"uniqueKey\":\"P:CSIT:P2:X\",\"marketType\":\"P:CSIT\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Correct Score IT\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:TGIT:M:X\":{\"uniqueKey\":\"FT:TGIT:M:X\",\"marketType\":\"FT:TGIT\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Exact Total Goals (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BTOU2.5:M:X\":{\"uniqueKey\":\"FT:BTOU2.5:M:X\",\"marketType\":\"FT:BTOU2.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Both Teams Over/Under 2.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:CSPRD:M:-0.5\":{\"uniqueKey\":\"FT:CSPRD:M:-0.5\",\"marketType\":\"FT:CSPRD\",\"sequenceId\":\"M\",\"lineId\":\"-0.5\",\"marketDescription\":\"Handicap Corners\",\"category\":\"HCAP\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:DNBOU2.5:M:X\":{\"uniqueKey\":\"FT:DNBOU2.5:M:X\",\"marketType\":\"FT:DNBOU2.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Draw No Bet and Over/Under 2.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:TCOE:M:X\":{\"uniqueKey\":\"FT:TCOE:M:X\",\"marketType\":\"FT:TCOE\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Total Corners Odd/Even\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:WTNIT-A:P2:X\":{\"uniqueKey\":\"P:WTNIT-A:P2:X\",\"marketType\":\"P:WTNIT-A\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Team A Win to Nil (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WBH:M:X\":{\"uniqueKey\":\"FT:WBH:M:X\",\"marketType\":\"FT:WBH\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"To Win Both Halves\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:AXBBTS:P1:X\":{\"uniqueKey\":\"P:AXBBTS:P1:X\",\"marketType\":\"P:AXBBTS\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Result and Both Teams To Score First Half\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:TG-B:M:X\":{\"uniqueKey\":\"FT:TG-B:M:X\",\"marketType\":\"FT:TG-B\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team B Exact Total Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WEH:M:X\":{\"uniqueKey\":\"FT:WEH:M:X\",\"marketType\":\"FT:WEH\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"To Win Either Half \",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WFB:M:X\":{\"uniqueKey\":\"FT:WFB:M:X\",\"marketType\":\"FT:WFB\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"To Win From Behind\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:AXBOU4.5:P1:X\":{\"uniqueKey\":\"P:AXBOU4.5:P1:X\",\"marketType\":\"P:AXBOU4.5\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Result and Over/Under 4.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BTS:M:X\":{\"uniqueKey\":\"FT:BTS:M:X\",\"marketType\":\"FT:BTS\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Both Teams to Score\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CLS:P1:X\":{\"uniqueKey\":\"P:CLS:P1:X\",\"marketType\":\"P:CLS\",\"sequenceId\":\"P1\",\"lineId\":null,\"marketDescription\":\"First Half Clean Sheet\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:AOU:M:1.5\":{\"uniqueKey\":\"FT:AOU:M:1.5\",\"marketType\":\"FT:AOU\",\"sequenceId\":\"M\",\"lineId\":\"1.5\",\"marketDescription\":\"Asian Total Goals\",\"category\":\"OVUNASIAN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:S3G-B:M:X\":{\"uniqueKey\":\"FT:S3G-B:M:X\",\"marketType\":\"FT:S3G-B\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team B To Score 3 or more Goals\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BTSOU3.5:M:X\":{\"uniqueKey\":\"FT:BTSOU3.5:M:X\",\"marketType\":\"FT:BTSOU3.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"BTTS and Over/Under 3.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:BTOU3.5:M:X\":{\"uniqueKey\":\"FT:BTOU3.5:M:X\",\"marketType\":\"FT:BTOU3.5\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Both Teams Over/Under 3.5\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:SPRD:P2:0\":{\"uniqueKey\":\"P:SPRD:P2:0\",\"marketType\":\"P:SPRD\",\"sequenceId\":\"P2\",\"lineId\":\"0\",\"marketDescription\":\"Second Half Handicap \",\"category\":\"HCAPEU\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:TG-A:P2:X\":{\"uniqueKey\":\"P:TG-A:P2:X\",\"marketType\":\"P:TG-A\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Exact Total Goals Team A\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:COU-B:P2:2.5\":{\"uniqueKey\":\"P:COU-B:P2:2.5\",\"marketType\":\"P:COU-B\",\"sequenceId\":\"P2\",\"lineId\":\"2.5\",\"marketDescription\":\"Team B Total Second Half Corners\",\"category\":\"OVUN\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:TGIT-B:M:X\":{\"uniqueKey\":\"FT:TGIT-B:M:X\",\"marketType\":\"FT:TGIT-B\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team B Exact Total Goals (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"P:CLSIT-B:P2:X\":{\"uniqueKey\":\"P:CLSIT-B:P2:X\",\"marketType\":\"P:CLSIT-B\",\"sequenceId\":\"P2\",\"lineId\":null,\"marketDescription\":\"Second Half Team B Clean Sheet (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false},\"FT:WEHIT-A:M:X\":{\"uniqueKey\":\"FT:WEHIT-A:M:X\",\"marketType\":\"FT:WEHIT-A\",\"sequenceId\":\"M\",\"lineId\":null,\"marketDescription\":\"Team A Wins Either Half (IT)\",\"category\":\"GENERAL\",\"winningSelections\":[],\"halfWinningSelections\":[],\"halfLosingSelections\":[],\"voidSelections\":[],\"resulted\":false}},\"marketsAlreadyResulted\":{}},\"lastRealIncident\":null}"
+    },
+    "requestId" : "spf1510997776539",
+    "requestTime" : 1510997776501,
+    "uniqueRequestId" : "R-eb139064-7f8a-4e09-8190-fb0203f4be29",
+    "versionId" : "1.2.3"
+  }
+}

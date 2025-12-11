@@ -1,0 +1,170 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ps</groupId>
+	<artifactId>example-amelco-algo-tennis</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>Third party tennis model</name>
+
+	<properties>
+		<activemq.version>5.14.0</activemq.version>
+		<algoFramework.version>1.1256.0</algoFramework.version>
+	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>ats-releases</id>
+			<name>ATS Releases repository</name>
+			<url>https://artifactory.amelco.co.uk/artifactory/ats-releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>ats-snapshots</id>
+			<name>ATS Snapshots repository</name>
+			<url>https://artifactory.amelco.co.uk/artifactory/ats-snapshots</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.hamcrest</groupId>
+			<artifactId>hamcrest-core</artifactId>
+			<version>1.3</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-genericfunctions</artifactId>
+			<version>${algoFramework.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>javax.jms</groupId>
+					<artifactId>jms</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-matchrunner</artifactId>
+			<version>${algoFramework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-dto</artifactId>
+			<version>${algoFramework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-momentum</artifactId>
+			<version>${algoFramework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-matchengineframework</artifactId>
+			<version>${algoFramework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-paramfind</artifactId>
+			<version>${algoFramework.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ats</groupId>
+			<artifactId>ats-algo-tradingrules</artifactId>
+			<version>${algoFramework.version}</version>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.activemq</groupId>
+		  <artifactId>activemq-client</artifactId>
+		  <version>${activemq.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-api</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.geronimo.specs</groupId>
+					<artifactId>geronimo-jms_1.1_spec</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<!-- build tests jar so code used in other modules -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<skipIfEmpty>true</skipIfEmpty>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<ajdtVersion>none</ajdtVersion>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.1</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+						<encoding>UTF-8</encoding>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+
+	</build>
+
+	<repositories>
+		<repository>
+			<id>ats.algo.repo1</id>
+			<name>ATS Releases</name>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+				<updatePolicy>never</updatePolicy>
+			</snapshots>
+			<url>https://external-artifactory.amelco.co.uk/artifactory/algo-release-external</url>
+		</repository>
+		<repository>
+			<id>pokerstars-algo</id>
+			<name>ATS Releases</name>
+			<releases>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+				<checksumPolicy>fail</checksumPolicy>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+				<updatePolicy>always</updatePolicy>
+			</snapshots>
+			<url>https://external-artifactory.amelco.co.uk/artifactory/pokerstars-release-local</url>
+		</repository>
+	</repositories>
+
+
+</project>

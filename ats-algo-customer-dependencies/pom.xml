@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<parent>
+		<groupId>ats</groupId>
+		<artifactId>ats-algo-parent</artifactId>
+		<version>1.1779.206</version>
+		<relativePath>../ats-algo-parent</relativePath>
+	</parent>
+
+  <modelVersion>4.0.0</modelVersion>
+	<packaging>pom</packaging>
+  <artifactId>ats-algo-customer-dependencies</artifactId>
+	<name>Customer Modules</name>
+
+	<modules>
+
+		<module>../ats-algo-parent</module>
+		<module>../ats-algo-genericfunctions</module>
+		<module>../ats-algo-margining</module>
+		<module>../ats-algo-matchengineframework</module>
+		<module>../ats-algo-core-springcontextbridge</module>
+		<module>../ats-algo-matchrunner</module>
+		<module>../ats-algo-paramfind</module>
+		<module>../ats-algo-tradingrules</module>
+
+	</modules>
+
+</project>
+
